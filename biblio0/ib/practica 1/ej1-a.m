@@ -1,0 +1,10 @@
+x=1;
+if(x==2*x-1)
+	cumple
+end
+if(x==x^2-2*x+2)
+	cumple
+end
+if(x==x^2-3*x+3)
+	cumple
+end

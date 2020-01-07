@@ -1,0 +1,7 @@
+Gauss		0,0124
+LU		0,0188
+Cholesky	0,0420
+Thomas		0,0172
+Jacobi		0,0121
+Gauss-Seidel	0,0125
+Matlab		0,0041

@@ -1,0 +1,24 @@
+tiempoN1 =
+
+   1.0e+04 *
+
+         0
+         0
+    2.0593
+         0
+         0
+         0
+         0
+
+
+resultadoN1 =
+
+     0
+     0
+     1
+     0
+     0
+     0
+     0
+
+lo anterior corresponde a i=7>> 

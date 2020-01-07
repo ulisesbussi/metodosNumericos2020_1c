@@ -1,0 +1,10 @@
+x=1;
+if(x==2*x-1)
+	printf("cumple\n")
+end
+if(x==x^2-2*x+2)
+	printf("cumple\n")
+	end
+if(x==x^2-3*x+3)
+	printf("cumple\n")
+end

@@ -1,0 +1,22 @@
+tiempoN1 =
+
+         0
+         0
+         0
+   90.9256
+         0
+         0
+   88.9729
+
+
+resultadoN1 =
+
+     0
+     0
+     0
+     1
+     0
+     0
+     1
+
+lo anterior corresponde a i=7>> 

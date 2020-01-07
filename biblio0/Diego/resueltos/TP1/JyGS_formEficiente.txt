@@ -1,0 +1,189 @@
+Nro de iteraciones: 63
+ans =
+
+    0.0060
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 19
+ans =
+
+    0.0180
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 135
+ans =
+
+   9.5855e-04
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 16
+ans =
+
+    0.0019
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 311
+ans =
+
+    0.0033
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.0017
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 654
+ans =
+
+    0.0509
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.0341
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 1459
+ans =
+
+    2.5913
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.2572
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 3004
+ans =
+
+   44.1049
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    2.3026
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 6576
+ans =
+
+   1.0242e+03
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+   57.1905
+
+
+ans =
+
+    1.0000
+
+
+tiempoJParaN_i =
+
+   1.0e+03 *
+
+    0.0000
+    0.0000
+    0.0000
+    0.0001
+    0.0026
+    0.0441
+    1.0242
+         0
+
+
+resultadoJParaN_i =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+         0
+
+
+tiempoGSParaN_i =
+
+    0.0180
+    0.0019
+    0.0017
+    0.0341
+    0.2572
+    2.3026
+   57.1905
+         0
+
+
+resultadoGSParaN_i =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+         0

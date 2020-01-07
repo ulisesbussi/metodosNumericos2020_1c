@@ -1,0 +1,77 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1535,         68]
+NotebookOptionsPosition[      1155,         50]
+NotebookOutlinePosition[      1491,         65]
+CellTagsIndexPosition[      1448,         62]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Practica de laboratorio N\[Degree]1",
+ FontSize->72]], "Title",
+ CellChangeTimes->{{3.577779596193296*^9, 3.577779633732154*^9}},
+ TextAlignment->Center],
+
+Cell["\<\
+
+
+
+
+
+
+
+\
+\>", "Title",
+ CellChangeTimes->{{3.5777796631204023`*^9, 3.577779681425994*^9}}],
+
+Cell["\<\
+M\[EAcute]todos num\[EAcute]ricos
+\
+\>", "Title",
+ CellChangeTimes->{{3.5777797867325163`*^9, 3.577779801997056*^9}, 
+   3.5777798719420424`*^9, 3.57777990391315*^9}],
+
+Cell["Bussi Ulises", "Subtitle",
+ CellChangeTimes->{{3.577779675456851*^9, 3.577779678338594*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 599},
+WindowMargins->{{134, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 177, 3, 239, "Title"],
+Cell[759, 27, 100, 10, 501, "Title"],
+Cell[862, 39, 176, 5, 147, "Title"],
+Cell[1041, 46, 98, 1, 54, "Subtitle"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

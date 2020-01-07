@@ -1,0 +1,139 @@
+Nro de iteraciones: 134
+ans =
+
+    0.0156
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 19
+ans =
+
+    0.0112
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 380
+ans =
+
+    0.0062
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 16
+ans =
+
+   5.2129e-04
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 1204
+ans =
+
+    0.0422
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+   7.8805e-04
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 3447
+ans =
+
+    0.3111
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.0024
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 10886
+ans =
+
+    3.1743
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.0113
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 31012
+ans =
+
+   27.5255
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.0591
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 97353
+ans =
+
+  605.7931
+
+
+ans =
+
+    1.0000
+
+Nro de iteraciones: 13
+ans =
+
+    0.5418
+
+
+ans =
+
+    1.0000

@@ -1,0 +1,163 @@
+>> Nro. de iteraciones 16 
+Nro. de iteraciones 10 
+
+ans =
+
+    9.2276
+
+Nro. de iteraciones 35 
+Nro. de iteraciones 10 
+
+ans =
+
+   19.9941
+
+Nro. de iteraciones 55 
+Nro. de iteraciones 10 
+
+ans =
+
+   46.9255
+
+Nro. de iteraciones 99 
+Nro. de iteraciones 8 
+
+ans =
+
+  101.2636
+
+Nro. de iteraciones 190 
+Nro. de iteraciones 8 
+
+ans =
+
+  232.6432
+
+
+
+
+con tridiag
+
+Nro. de iteraciones 11 
+
+ans =
+
+    9.2283
+
+Nro. de iteraciones 26 
+Nro. de iteraciones 8 
+
+ans =
+
+   19.9941
+
+Nro. de iteraciones 55 
+Nro. de iteraciones 9 
+
+ans =
+
+   46.9254
+
+Nro. de iteraciones 93 
+Nro. de iteraciones 11 
+
+ans =
+
+  101.2635
+
+Nro. de iteraciones 175 
+Nro. de iteraciones 8 
+
+ans =
+
+  232.6436
+
+Nro. de iteraciones 274 
+Nro. de iteraciones 10 
+
+ans =
+
+  492.9700
+
+>> % Obtencion de los numeros de condicion para las matrices del TP1
+
+condicion = zeros(8,1);
+n = [10 30 100 300 1000 3000 10000 20000];
+tol = 1e-6;
+Nmax = 10000;
+
+for i=1:8
+    A = generadorMatrizTP1(i);
+    condicion(i) = numeroDeCondicionDeTridiag(A, tol, Nmax);
+    condicion(i)
+end
+condicion
+Nro. de iteraciones 21 
+Nro. de iteraciones 12 
+
+ans =
+
+    9.2283
+
+Nro. de iteraciones 38 
+Nro. de iteraciones 10 
+
+ans =
+
+   19.9941
+
+Nro. de iteraciones 56 
+Nro. de iteraciones 8 
+
+ans =
+
+   46.9254
+
+Nro. de iteraciones 92 
+Nro. de iteraciones 10 
+
+ans =
+
+  101.2633
+
+Nro. de iteraciones 171 
+Nro. de iteraciones 10 
+
+ans =
+
+  232.6428
+
+Nro. de iteraciones 316 
+Nro. de iteraciones 8 
+
+ans =
+
+  492.9667
+
+Nro. de iteraciones 463 
+Nro. de iteraciones 8 
+
+ans =
+
+   1.1155e+03
+
+Nro. de iteraciones 552 
+Nro. de iteraciones 12 
+
+ans =
+
+   1.7811e+03
+
+
+condicion =
+
+   1.0e+03 *
+
+    0.0092
+    0.0200
+    0.0469
+    0.1013
+    0.2326
+    0.4930
+    1.1155
+    1.7811

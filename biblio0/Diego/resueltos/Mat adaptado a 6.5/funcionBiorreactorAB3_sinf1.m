@@ -1,0 +1,24 @@
+function [ Y ] = funcionBiorreactorAB3_sinf1( X )
+%Funcion del modelado del biorreactor por Adams-Bashford de tercer orden
+   
+    n = length(X);
+    h = X(2) - X(1);
+
+    Y = NaN(n,1);
+   
+    f1 = @(y) 0.1 - 0.4.*y;     %Der. de la concentración del reactivo
+    y1 = 1;                     %Valor a tiempo 0
+    Y(1) = y1;
+        
+    for i=1:2
+        K1 = 0.1 - 0.4.*(Y(i));
+        K2 = 0.1 - 0.4.*(Y(i) + (h/2)*K1);
+        K3 = 0.1 - 0.4.*(Y(i) + h*(-K1 + 2*K2));
+        Y(i+1) = Y(i) + h*((1/6)*K1 + (2/3)*K2 + (1/6)*K3);
+    end
+
+    for i=3:n-1
+       Y(i+1) = Y(i) + (h/12)*(23*(0.1 - 0.4.*Y(i)) - 16*(0.1 - 0.4.*Y(i-1)) + 5*(0.1 - 0.4.*Y(i-2)));
+    end
+end
+

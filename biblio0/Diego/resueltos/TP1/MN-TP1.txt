@@ -1,0 +1,182 @@
+Nro de iteraciones: 63 
+Nro de iteraciones: 19 
+
+tiempoN1 =
+
+    0.0091
+    0.0088
+    0.0055
+    0.0071
+    0.0065
+    0.0058
+    0.0001
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=1>> 
+
+Nro de iteraciones: 135 
+Nro de iteraciones: 16 
+
+tiempoN1 =
+
+    0.0118
+    0.0106
+    0.0059
+    0.0072
+    0.0070
+    0.0056
+    0.0001
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=2>> 
+
+Nro de iteraciones: 311 
+Nro de iteraciones: 13 
+
+tiempoN1 =
+
+    0.0425
+    0.0418
+    0.0119
+    0.0076
+    0.0094
+    0.0067
+    0.0003
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=3>> 
+
+Nro de iteraciones: 654 
+Nro de iteraciones: 13 
+
+tiempoN1 =
+
+    0.9047
+    0.8968
+    0.1275
+    0.0108
+    0.0329
+    0.0217
+    0.0016
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=4>> 
+
+Nro de iteraciones: 1459 
+Nro de iteraciones: 13 
+
+tiempoN1 =
+
+   36.0535
+   35.7939
+    5.7728
+    0.0575
+    2.2780
+    0.2455
+    0.0496
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=5>> 
+
+Nro de iteraciones: 3004 
+Nro de iteraciones: 13 
+
+tiempoN1 =
+
+  979.7783
+  971.7350
+  184.9242
+    0.4778
+   44.2363
+    2.3139
+    0.7399
+
+
+resultadoN1 =
+
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+    1.0000
+
+lo anterior corresponde a i=6>> 
+
+
+i=7 ---> Gauss: 9.2381e+04
+	 LU: 9.1953e+04
+
+Operation terminated by user during algoritmoCholesky (line
+30)
+
+
+In modeloTP1_TodosParaNi (line 59)
+    [L]=algoritmoCholesky(A1);
+ 
+>> tiempoN1
+
+tiempoN1 =
+
+   1.0e+04 *
+
+    9.2381
+    9.1953
+       NaN
+       NaN
+       NaN
+       NaN
+       NaN
+
+>> 
