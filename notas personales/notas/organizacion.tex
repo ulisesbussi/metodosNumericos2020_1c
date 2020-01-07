@@ -1,0 +1,93 @@
+
+\documentclass[10pt]{article}
+
+\usepackage[latin1]{inputenc}
+%\usepackage[spanish,activeacute]{babel}
+\usepackage[compress]{cite}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsmath}
+\DeclareMathOperator{\sen}{sen}
+\usepackage{natbib}
+\usepackage{balance}
+\newcommand{\fgref}[1]{Fig.~\ref{#1}}
+% Para que el título referencias aparezca en español puede usar la siguiente sentencia
+ \renewcommand{\refname}{Referencias}
+\usepackage[makeroom]{cancel}
+% correct bad hyphenation here
+\hyphenation{lo-ca-li-za-cio-nes ve-hi-cu-lar cons-truc-cion geo-re-fe-ren-cia-das mu-ni-ci-pal si-mu-la-cio-nes }
+
+
+\begin{document}
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+\title{Notas de organización de Clases}
+
+
+
+\maketitle
+
+En principio la materia tiene 18 clases (los miercoles desde el 18 de Marzo al 15 de Julio).
+De esas 18 clases, hay que despreciar un mínimo de 3 para evaluaciones, y al menos considerar 1 o 2 de contingencias ( consultas, paros, feriados no contemplados, etc). 
+
+La idea de evaluación de la materia sería 1 parcial escrito individual, principalmente teórico, trabajos prácticos con informes ( al menos 2) y un trabajo final. En el \textit{worst case scenario}, son 13 clases teórico prácticas de 4hs cada una (al que hay que descontarle un break de 15 mins aprox). 
+
+Los contenidos mínimos de la materia són :
+
+\begin{itemize}
+\item Nociones de error.
+\item Resolución de ecuaciones lineales (métodos directos e iterativos).
+\item Factorización.
+\item Resolución de ecuaciones no lineales.
+\item Aproximación de funciones. 
+\item Integración y derivación numérica.
+\item Resolución de ecuaciones diferenciales (mínimo Euler y RK).
+\end{itemize}
+
+
+
+\section*{Unidad 0-1: Básicas de los métodos numéricos y errores.}
+
+En esta unidad se hará una fuerte introducción a los métodos numéricos y a las herramientas de programación que se utilizaran en la materia.
+
+La principal herramienta de utilizada en la materia será Matlab. Sobre esta se hará una breve introducción a la sintaxis, funciones básicas, control de flujo , programación de funciones, medición de tiempo, recursos de ayuda.
+
+Sobre las básicas de los métodos numéricos se introduciran, las nociones de errores numéricos, orden de algoritmos, estabilidad, numeros de condicionamiento {\color{red} por ahora esto, se puede agregar más?}.
+
+
+
+
+\section*{Unidad 2: ecuaciones lineales y factorización}
+
+Esta unidad arranca con la presentación de raices de una función y la presentación de los puntos fijos.
+
+Luego se trataran los métodos directos de resolución de ecuaciones lineales \textit{SEL} (Gauss, pivot, factorización) , esto dará lugar a la presentación de distintos tipos de factorización de matrices (LU, cholesky) . Y con el ejemplo adecuado la presentación del número de condición de una matriz.
+
+Por último se presentan los métodos indirectos o iterativos de solución de ecuaciones lineales(Jacobi, Gauss-Seidel, relajación), dando pie a la siguiente unidad.
+
+
+
+
+\section*{Unidad 3: Resolución de ecuaciones no lineales}
+
+
+Se propone dar una introducción a SENL, y planteo de métodos de resolución ( Newton-Raphson, Broyden $\rightarrow$ Sherman-Morrison)
+
+
+\section*{Unidad 4: aproximación de funciones, integración y derivación numérica}
+
+Se propone comenzar la unidad con la propuesta de interpolación y aproximación de funciones (Taylor, lagrange, spline). Para luego tratar el problema de ajustes de datos (Least Squares, {\color{red} RLS también?}). 
+
+Por último para cerrar la unidad se presentaran métodos de derivación e integración numérica (diferencias finitas, trapecio).
+
+\section*{Unidad 5: Ecuaciones diferenciales.}
+
+Se explicarán métodos de resolución de ecuaciones diferenciales (Euler fordward, backward , $\theta$, rk)
+
+
+
+
+\end{document}
+
+
