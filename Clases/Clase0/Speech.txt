@@ -1,0 +1,129 @@
+Esta presentación que cuenta de 5 partes, primero una introducción, 
+después una descripción de la plataforma móvil y el modelo matemático asociado. Luego,
+en la sección de estrategias de control se presentan el algoritmo de generación de trayectorias,
+las dos estrategias de control utilizadas, y el filtro de kalman. Las estrategias de control
+son de naturaleza completamente distintas, una está basada en encontrar las acciones de control
+que resuelvan la ecuación diferencial y la otra en la teoría de estabilidad de Lyapunov para 
+demostrar la estabilidad asintótica del sistema. Por último se muestran 
+los resultados en simulación y las conclusiones
+	
+La robótica móvil es un tema ampliamente estudiado, esta disciplina resulta interesante en lo 
+personal porque integra varias áreas: electrónica, mecánica, física, programación y control 
+entre otras.
+Otro de los puntos de interés sobre la robótica es el amplio campo de aplicaciones, ya sea en 
+la industria, a nivel hogareño, en transporte o agricultura.
+
+En ésta última, se lleva a cabo un desarrollo en los años anteriores de creciente escala. Esto 
+se debe a que la robótica permite reemplazar personas en trabajos de riesgo y optimizar el uso 
+de recursos. 
+Tal es así el caso de los agroquímicos en el campo, que puede presentar un potencial riesgo a la 
+salud. En lo personal, este tema forma parte del trabajo a desarrollar en mi tesis doctoral, 
+que comenzó este año y trata sobre un desarrollo para aplicación sitio-específica de agroquímicos.
+Para este caso existen desarrollos robóticos como los del INTA para ambientes cerrados, cuyo 
+funcionamiento se basa en un sensor magnético que mide el campo generado por una corriente que 
+circula por un cable enterrado.
+Como particular ventaja de este método cabe destacar la simplicidad de la solución. Por otro 
+lado carece de robustez frente al cambio de trayectoria, ya que eso implicaría cambiar el 
+tendido subterráneo. Y es además difícilmente escalable ya que en un campo abierto la tierra es
+ trabajada, lo que podría dañar el cable y porque requeriría de grandes tendidos eléctricos para 
+ utilizar de señal.
+ 
+Lo que se propone en este trabajo es el uso de sensores de posicionamiento para realizar el control 
+de seguimiento de trayectoria de la plataforma móvil. En particular comenzando en pequeña escala 
+utilizando un "GPS de interior".
+El gps de interior es un sensor de posición relativa que obtiene sus mediciones a partir de una 
+triangulación de distancias basada en ultra sonido. Este sensor posee un error de +-2cm.
+
+Para plantear el modelado se partió de la plataforma con la que contábamos: un robot móvil de 
+tracción diferencial de 3 ruedas que cuenta con 2 motores de corriente continua, 2 baterías, un 
+puente H, un arduino mega, un sensor GPS de interior y una pc portátil.
+
+Como modelo matemático se propone utilizar el propuesto en la bibliografía para robots del tipo 
+diferencial en base de las velocidades tangencial y angular de la plataforma. Puede justificarse 
+que ante la ausencia de deslizamiento, V y W están relacionadas con las velocidades de las ruedas 
+de la siguiente manera.
+
+Para poder realizar el seguimiento a trayectoria es necesario contar con una trayectoria de 
+referencia. Por lo que se propone un algoritmo que las genere a partir de una imagen digital con 
+los obstáculos identificados; estos se reemplazan por una circunferencia de radio la suma del 
+radio de los objetos más el radio de la plataforma y un radio de seguridad. Luego se genera la 
+trayectoria como una línea recta entre dos puntos unida por secciones de circunferencia que 
+rodeen los obstáculos.
+
+Antes de presentar las estrategias de control, es necesario plantear el modelo matemático en las 
+variables de error. Este modelo permite definir la dinámica del sistema a partir de una trayectoria 
+de referencia de tal manera que cuando los estados tienden a 0 la base se encuentra sobre la posición 
+deseada. Para eso se propone la siguiente transformación que consta de una traslación y rotación del 
+sistema.
+
+Que derivando y reemplazando, permite obtener la dinámica de las variables del error, donde 
+Vr y Wr son las entradas de referencia que generan la trayectoria deseada.
+
+Pasamos así a presentar las estrategias de control, la primera de ellas, el control basado en 
+integración trapezoidal, propone tomar el problema a partir de la discretización de la solución 
+de la ecuación diferencial, y aproximar la integral por el método trapezoidal, de esta manera
+se reduce a un sistema de ecuaciones algebráicas de donde puede despejarse las acciones de control
+ que lleven al sistema a la posición deseada. si reemplazamos el estado en el tiempo siguiente 
+estado por el estado deseado 
+
+y lo aplicamos al modelo de variables del error llegamos al siguiente sistema de 
+ecuaciones de 3 ecuaciones con 4 incógnitas: las acciones de control V y W en los tiempos N y N+1, 
+donde x e y sub de son los estados deseados en el tiempo n+1.
+La solución de mínima norma de esta ecuación es la siguiente, donde los parámetros a1 a2 y a3 
+son los presentados  y b1 b2 y b3 son las componentes del vector del miembro derecho del sistema  
+Por último  se propone una acción proporcional a la hallada 
+anteriormente con kv y kw acotados entre 0 y 1. estos serán los parámetros de 
+diseño que permiten ajustar la dinámica a lazo cerrado.
+
+Para el control basado en Lyapunov, se proponen una acción de control y una función tal que se 
+cumplan las condiciones del teorema de estabilidad de lyapunov, se eligen estas acciones de 
+control y esta función, que es mayor que 0 siempre que k2 esa positiva.
+
+Calculando la derivada, y reemplazando, se obtiene la V punto siguiente: que si k1 y k3 son 
+mayores de 0 la derivada es menor o igual que 0 y por lo tanto puede asegurarse, bajo estas 
+condiciones que el equilibrio del sistema es estable. Para demostrar la estabilidad asintótica 
+del equilibrio basta con realizar la linealización alrededor del mismo, obteniendo la matriz 
+de la dinámica siguiente. Es posible utilizado el criterio de Routh-Hurwitz garantizar que 
+los autovalores del sistema linealizado tienen parte real negativa y por lo tanto la 
+estabilidad al punto es asintótica.
+
+Si bien existe la posibilidad de estimar la variable tita a partir del modelo, utilizando la 
+información de la velocidad angular, existen métodos que garantizan la convergencia 
+asintótica de la estimación por ejemplo el filtro de kalman. Este se basa en considerar el modelo
+del sistema como se muestra, donde q es el ruido de modelo, r el 
+de medición y Q y R mayúsculas las covarianzas asociadas. 
+
+Puede expresarse el filtro de Kalman como dos etapas, una de predicción donde se utiliza el
+conocimiento del modelo para realizar una prediccion del estado y medicion en el tiempo actual,
+se calcula la incerteza asociada y la ganancia de kalman a partir de los jacobianos de la 
+dinámica y la medición. Y otra etapa de estimación, donde se utiliza la información de las 
+mediciones para realizar una corrección de los estados estimados y se calcula la incerteza 
+de estimación.
+a de estimación, es esta variable P.
+
+Una manera de analizar el funcionamiento conjunto de las estratégias de control con el 
+EKF es a traves de simulaciones para eso se tiene en cuenta los siguientes detalles:
+Las acciones de control están limitadas, la velocidad tangencial entre 0 y 6 centímetros por 
+segundo y la angular entre menos 0.3 y 0.3 radianes por segundo. 
+Se compara el EKF contra una estimación basada en la aproximación por euler	.
+Se busca encontrar el seguimiento a la trayectoria y la convergencia del EKF.
+
+Para la primer estrategia de control descrita puede verse la trayectoria con los parámetros 
+elegidos Kv y Kw, tanto el EKF como la aproximación del modelo consiguen el seguimiento. 
+
+Para comprobar la convergencia del Filtro de Kalman se presenta el error cuadrático en posición 
+y el error en la orientación para ambos casos, donde puede ver que el error cuadrático e 
+posición disminuye mientras que sin el filtro el error de orientación presenta un offset.
+
+Para la segunda estrategia de control puede verse que la trayectoria utilizando los parámetros 
+k1=1 k2=0.5 y k3=2, Puede verse que el sistema con el EKF consigue el seguimiento a la 
+trayectoria mientras que sin el filtro esto no sucede. 
+
+Para el caso e los errores de estimación, se obtienen resultados similares en el error 
+cuadrático de posición y orientación que en el caso anterior.
+
+Terminando por las conclusiones, se consigue la convergencia a  la trayectoria con ambas 
+estrategias y el filtro de kalman, y la convergencia del estimador, el filtro cumple su función 
+como estimador y como filtro en el sistema no lineal. En ausencia del filtro de kalman el control 
+basado en lyapunov no consigue el seguimiento, esto implica que la variable no medida afecta en 
+menor medida a la estrategia numérica.
