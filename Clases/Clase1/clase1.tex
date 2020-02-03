@@ -1,0 +1,307 @@
+
+%----------------------------------------------------------------------
+\documentclass[xcolor=svgnames]{beamer} %, handout
+\usetheme{lined}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}   
+\usepackage{times}
+\usepackage{geometry}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+
+\usepackage{algorithm2e}
+
+%\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage{fancybox}
+\usepackage{tabularx}
+%\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{siunitx} % para \degree
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+
+
+%\usepackage[most]{tcolorbox}
+
+
+\theoremstyle{plain}
+\newtheorem{definicion}{Definición}
+
+
+
+\definecolor{redUnq}{rgb}{.7,.1,.1}
+\definecolor{redUnq2}{rgb}{.5,.1,.3}
+
+\mode<presentation>{
+	%\usetheme{Boxes}
+	%\usecolortheme[RGB={237,132,8}]{structure}
+	%\usecolortheme[RGB={205,173,0}]{structure}
+	\usecolortheme[RGB={100,10,10}]{structure}
+
+	%\beamertemplateshadingbackground{SteelBlue!70}{Honeydew!10}
+	%\usetheme{Warsaw}
+	%\usecolortheme{default}
+	\usetheme{Singapore}
+	%\usetheme{Lined}
+	%\usetheme[height=7mm]{Rochester} 
+	\setbeamerfont{title}{shape=\bfseries,family=\rmfamily}
+	%\usefonttheme[onlylarge]{structuresmallcapsserif}
+	%\usefonttheme[onlysmall]{structurebold}
+	\setbeamercolor{title}{fg=redUnq,bg=gray!40}
+	\usefonttheme{professionalfonts}
+	\setbeamercovered{highly dynamic}
+	\setbeamercovered{transparent=10}
+	\setbeamertemplate{navigation symbols}{}
+	\colorlet{structure}{redUnq}
+
+	\setbeamertemplate{frametitle}[default][left]
+}
+
+\definecolor{verzul}{rgb}{0, 0.5,0.5}
+
+\renewcommand{\textbf}[1]{{\bfseries\textcolor{redUnq2}{#1}}}
+\renewcommand{\emph}[1]{{\em\textcolor{redUnq2}{#1}}}
+
+\setlength{\parindent}{0pt}
+\theoremstyle{definition}
+\newtheorem{ejem}{Ejemplo}
+\newtheorem{defi}{Definición}
+\newtheorem{ejer}{Ejercicio}
+\newtheorem{prop}{Propiedad}
+\newtheorem{lema}{Lema}
+\newtheorem{teor}{Teorema}
+\newtheorem{coro}{Corolario}
+
+ 
+
+\newcommand{\Rset}{\mathbbmss{R}}
+\newcommand{\Cset}{\mathbbmss{C}}
+\newcommand{\PD}[2]{\frac{\partial #1}{\partial #2}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\rango}{rango}
+
+\newenvironment{Boxedminipage}%
+{\begin{Sbox}\begin{minipage}}%
+{\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+
+
+
+\title{Métodos Numéricos - Clase 1}
+  \logo{\includegraphics[scale=0.25]{logoUnq} }
+\author{Ulises Bussi- Javier Portillo}
+%\institute{\scalebox{2}{\includegraphics[scale=0.1]{mdp02.jpg}}} %{Departamento de Ciencia y Tecnología\\ Universidad Nacional de Quilmes\\ }
+\date{ $1^\circ$ cuatrimestre 2020} 
+
+
+%%%%%%%%% Para que al comenzar una section aparezca el Contenido
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenidos de la Presentación}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+
+
+
+\begin{document} 
+
+
+\begin{frame} %\thispagestyle{empty}
+	\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Antes de empezar}
+\begin{tcolorbox}
+	\begin{defi} \vspace{15pt}
+
+		Un método numérico es un procedimiento que permite obtener, \textbf{de forma aproximada}, solución a un problema, por medio de la aplicación de algoritmos.
+	\end{defi}
+\end{tcolorbox}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Nociones de Error}
+
+
+
+
+%\begin{minipage}{.4\linewidth}
+\textbf{¿Que es un error?}
+
+\pause
+
+\begin{tcolorbox}
+Un error es todo aquello que hace que nuestra representación de un objeto de estudio difiera de la realidad
+\end{tcolorbox}
+
+
+\begin{center}
+
+  \begin{tikzpicture}[
+   squarednode/.style={rectangle, draw=red!60, fill=red!5, minimum size=.1mm},
+   ]
+   %Nodes
+   \node[squarednode]	(errores)  																	{Errores Totales};
+   \node[squarednode] (modelado) 			[below = of errores, xshift= -15mm]		{Modelado};
+   \node[squarednode] (numerico) 			[below = of errores, xshift=  15mm]		{Numéricos};
+   \node[squarednode] (truncamiento)	[below = of numerico, xshift=-15mm] 	{Truncamiento};
+   \node[squarednode] (redondeo)     	[below = of numerico, xshift= 15mm]	{Redondeo};
+ 
+   %Lines
+   %\draw[->] (uppercircle.north) -- (errores.north);
+   \draw[->] (errores.south) -- (modelado.north);
+   \draw[->] (errores.south) -- (numerico.north);
+   \draw[->] (numerico.south) -- (truncamiento.north);
+   \draw[->] (numerico.south) -- (redondeo.north);
+  \end{tikzpicture}
+\end{center}
+
+%\end{minipage}
+
+	
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Errores Numéricos}
+\textbf{Error de truncamiento}: expresar con menor cantidad de cifras significativas un número. (e.g. aproximar el valor de una función usando un polinomio de taylor de un grado determinado).
+\vspace{10pt}
+
+
+\textbf{Error de redondeo}: Dado por la incapacidad de expresar números infinitos en una computadora (e.g. expresar un numero irracional numéricamente)
+
+
+\vspace{10pt}
+\pause
+
+\begin{tcolorbox}
+\textbf{IMPORTANTE:}
+Estos errores se pueden acumular en los métodos numéricos e incluso amplificar
+\end{tcolorbox}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Representación de errores}
+Existen varias maneras, las más comunes:
+
+\begin{minipage}{.45\linewidth}
+  \textbf{Error Absoluto:}
+
+  $$ e_a = | \hat x - x |$$
+  \vspace{3pt}
+  
+  \underline{e.g.:}
+  $$x = 280 \si{\degree}K\ ,\ \hat x = 273 \si{\degree}K$$
+	Error absoluto:
+	$ 7 \si{\degree}K$
+\end{minipage} \vline \hspace{10pt}
+\begin{minipage}{.45\linewidth}
+	\vspace{10pt}
+  \textbf{Error relativo:}
+
+  $$ e_r = \frac{| \hat x - x |}{|x|}$$
+
+  \underline{e.g.:}
+  $$x = 350 \si{\degree}K\ ,\ \hat x = 273 \si{\degree}K$$
+	Error relativo:
+	$ 0.025 \approx 2.5\%$
+\end{minipage}\vspace{10pt}
+
+
+Cada uno aporta cierta información sobre el error, ninguna es incorrecta.
+
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Errores Numéricos}
+
+\textbf{Example time!}
+
+
+{\color{red} caida libre con redondeo }\vspace{10pt}
+
+
+{\color{red} calcular el valor de $\sqrt{2}$ con un polinomio de taylor}\vspace{10pt}
+
+La importancia de estos errores se apreciará mejor cuando se presenten métodos iterativos.
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Convergencia}
+
+	Método numérico $\rightarrow$ conjunto de parámetros propios.
+	
+	(e.g. en polinomio de Taylor el orden del mismo)\vspace{10pt}
+	
+	Estos determinan:
+\begin{itemize}
+	\item Comportamiento.
+	\item Exigencia.
+	\item Calidad de la solución.
+\end{itemize}
+	 
+	 
+**\textit{Poor Definition}**\\
+La convergencia de un algoritmo relaciona, como al aumentar la exigencia aumenta la calidad de la solución. 
+
+\textbf{Depende no solo del algoritmo, sino también del problema a resolver.}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Estabilidad}
+Cuando un método depende de parámetros de entrada (veremos más adelante), \\
+la estabilidad del método relaciona la variación de los parametros de entrada con el resultado obtenido.
+
+
+\end{frame}
+
+
+
+
+
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+
+
+
+
+
+
