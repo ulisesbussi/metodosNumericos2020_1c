@@ -281,13 +281,82 @@ La convergencia de un algoritmo relaciona, como al aumentar la exigencia aumenta
 \begin{frame}
 \frametitle{Estabilidad}
 Cuando un método depende de parámetros de entrada (veremos más adelante), \\
-la estabilidad del método relaciona la variación de los parametros de entrada con el resultado obtenido.
+la estabilidad del método relaciona la variación de los parámetros de entrada con el resultado obtenido.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Número de condición de una matriz}
+
+El numero de condición de una matriz, es un valor que permite saber que tan cercana a Singular es esta, i.e. que tan buena será nuestra inversa. y que tan sensible será un sistema a perturbaciones. 
+
+\begin{center}
+\begin{minipage}{.95\linewidth}
+\begin{tcolorbox}
+\begin{defi}\vspace{-15pt}
+	$$ \text{Cond}(A) = ||A||.||A^{-1}||$$ 
+\end{defi} 
+\end{tcolorbox}
+\end{minipage}
+\end{center}
+
+\begin{minipage}{.45\linewidth}
+Se puede calcular como:
+$$ \text{Cond}(A) = \sqrt{\frac{\lambda^*_{max}}{\lambda^*_{min}}}$$
+\end{minipage}
+ \begin{minipage}{.45\linewidth}
+Donde  $\lambda^*_{max}$ y $\lambda^*_{min}$ son los autovalores mayor y menor de la matriz $ A'\ A$
+\end{minipage}
 
 
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Número de condición de una matriz}\vspace{-15pt}
+\textbf{Una aplicación:} supongamos que tenemos el sistema $ A\ x = b$ y queremos hallar x. \vspace{15pt}
 
+\begin{minipage}{.4\linewidth}
+Perturbación de entrada:\\
+ $\hat b = b+\delta b$
+\end{minipage}  \hspace{10pt}$\rightarrow$\hspace{10pt}\begin{minipage}{.4\linewidth}
+Perturbación de salida: \\$\hat x = x+\delta x$. 
+\end{minipage}\vspace{10pt}
+
+Si miramos los errores cometidos:\vspace{10pt}
+
+\begin{minipage}{.45\linewidth}
+$$\varepsilon_b = \frac{ ||\delta b||}{||b||}$$
+\end{minipage}\begin{minipage}{.45\linewidth}
+$$\varepsilon_x = \frac{ ||\delta x||}{||x||}$$
+\end{minipage}
+Tendremos\vspace{10pt}
+\begin{tcolorbox}
+$$\varepsilon_x < \text{Cond}(A) \ \varepsilon_b$$
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}
+\frametitle{Número de condición de una matriz}
+\textbf{Un ejemplo}\vspace{15pt}
+
+\begin{huge}
+$A=\begin{bmatrix} 
+15 & 11 \\
+20 & 15
+\end{bmatrix}$,\hspace{30pt}$b=\begin{bmatrix} 
+6 \\
+8
+\end{bmatrix}$ \vspace{15pt}
+
+y \hspace{30pt} $\delta b=\begin{bmatrix} 
+-1
+-3
+\end{bmatrix}$
+
+\end{huge}
+
+\end{frame}
 
 
 

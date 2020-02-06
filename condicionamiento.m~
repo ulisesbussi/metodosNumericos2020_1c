@@ -1,0 +1,43 @@
+a1= [1e-4,0;0,550];
+w = [3,7;4,9];
+%a= round(w*a1*inv(w));
+a = [15,11;9,3];
+disp('condicion de a: '+string(cond(a)))
+
+b   = [5 ;  8 ];
+db  = [1 ;  -3];
+%db  = [.1; -.3];
+
+bdb = b+db;
+ia  = inv(a);
+
+
+u   = ia* b ;
+udu = ia*bdb;
+du =udu-u;
+
+
+er_du = norm(du)/norm(u);
+er_db = norm(db)/norm(b);
+
+
+disp('sensibilidad: '+string(er_du/er_db))
+
+%%
+
+A  = [10 7 8 7; 7 5 6 5; 8 6 10 9; 7 5 9 10];
+q = randn(4);
+iA = inv(A);
+b  = [32 23 33 31]';
+db = [.1 -.1 .1 -.1]';
+bdb = 1.01*b;
+
+
+u   = iA* b ;
+udu = iA*bdb;
+du = udu-u;
+
+er_du = norm(du)/norm(u);
+er_db = norm(db)/norm(b);
+
+
