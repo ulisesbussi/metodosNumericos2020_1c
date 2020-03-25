@@ -1,0 +1,242 @@
+
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+
+
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage[defaultmono]{droidmono}
+
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+%\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+\title{Guía 0}
+
+\author{Ulises Bussi, Universidad Nacional de Quilmes}
+
+\date{01/01/2014}
+
+\maketitle \vspace{20pt}
+
+
+\textbf{Nota: } En esta guía se introducirán, ejercicios para el manejo básico del software, no necesariamente ejercicios de métodos numéricos estrictamente hablando.\\
+
+\textbf{Nota 2: } Al realizar mediciones de tiempo en los algoritmos, muchas veces se verá la presencia de inestabilidades. Esto se debe a que el sistema operativo designa las prioridades de procesos, eso puede hacer que realizar la misma cuenta varias veces y medir el tiempo tome distintos tiempos (puede hacer el experimento si desea). Para reducir ese error, una solución simple es realizar la cuenta repetidas veces y promediar esos tiempos. Existen soluciones más complejas pero escapan de los alcances de la materia. 
+
+\subsubsection*{\underline{Ejercicio 1}}
+
+\begin{enumerate}[label=\alph*.]
+ \item Cargue un vector con los valores $0$ al $100$ con paso $0.1$.
+ \item Evalúe y grafique las siguientes funciones:
+ \begin{enumerate}[label=\roman*.]
+   \item $f_1(x) =x^2 +3x -7$  \hspace{115pt} \inlineitem $f_2(x) = e^x - 3x^2 \ln(x)$
+   \item $f_3(x) = \sqrt{x^2+x+\cos(x)}\ e^{-x^2}$ \hspace{65pt} \inlineitem $f_4(x) = \sqrt{x^2 -3}$
+   \item $f_5(x) = \cos x$
+ \end{enumerate}
+\end{enumerate}
+Respecto a la $f_4$ que sucedió?.\\
+Respecto a la $f_5$ que observación se puede hacer?  calcule el seno de $90^\circ$
+
+\subsubsection*{\underline{Ejercicio 2}}
+Se define el factorial de un número natural como:
+
+\begin{equation*}
+	\Gamma(n) = \left\lbrace
+	\begin{array}{l c}
+		1 								& \text{si } \text n =1 \vee  \text n =0\\
+		n .\ \Gamma(n-1) 	& \text{si } \text n > 1 
+	\end{array} \right.
+\end{equation*}
+Realice un programa que le permita calcular el factorial de un número.
+
+\subsubsection*{\underline{Ejercicio 3}}
+
+En el 1200 un viajero, comerciante y matemático planteó un problema comercial, cuanto menos interesante:
+
+Supongamos que uno quiere dedicarse a la cría de conejos para la venta. Entonces inicialmente compra una pareja de conejos recién nacidos, unos conejos emhh... mágicos, estos conejos tienen algunas particularidades:
+\begin{itemize}
+\item cada conejo tarda, desde su nacimiento, un mes en llegar a la madurez sexual.
+\item una vez en la madurez, estos conejos se reproducen, teniendo en cada apareamiento un par de crias.
+\end{itemize}
+Ignoremos el problema Adán y Eva de la reproducción entre hermanos y veamos como aumenta nuestra población de conejos. Al primer mes, tendremos la pareja de recién nacidos que compramos. 
+
+Al segundo mes, esta pareja alcanza la madurez y se reproduce, pero el periodo de gestación es de un mes, con lo que seguimos teniendo una sola pareja. 
+
+En el tercer mes tendremos 2 parejas :la inicial, procreando de nuevo, y una recién nacida. 
+
+Para el cuarto mes tendremos 3 parejas: la inicial, la primer generación ya adulta y procreando y la segunda generación recién nacida.
+
+En el quinto mes tendremos 5 parejas: la que compramos y la primer generación tuvieron crias, la segunda generación comienza a procrear.
+
+Si siguen avanzando los meses podemos ver que el número de parejas será: 1,1,2,3,5,8,13... (básicamente el resultado de cada mes es la suma de los dos meses anteriores). A esta sucesión de números se la conoce como la sucesión de Fibonacci. Tiene su origen en el problema recién contado, por el comerciante viajero y matemático Leonardo de Pisa (más conocido por el nombre de Fibonacci).
+
+Realice un programa que le devuelva los valores de la sucesión de Fibonacci hasta un orden n.\\
+
+\begin{itemize}
+\item[-] Calcule los primeros 50 términos de la sucesión, grafiquelos. Grafique también el cociente de cada término respecto del anterior ($ f_k / f_{k-1}$), incluya en este gráfico también una recta en el número $\varphi = 1.61803398875$
+\end{itemize}
+
+
+\subsubsection*{\underline{Ejercicio 4}}
+
+Realice un programa que determine si un número a es divisible por otro número b, con $\text a, \text b \in \mathbb{N}$.
+
+\subsubsection*{\underline{Ejercicio 5}}
+
+
+\begin{enumerate}
+\item Si queremos encontrar todos los divisores enteros de un número $n$ basta con probar si la división de $n$ con cada uno de los números hasta $n-1$ da un número entero (o tiene resto 0). 
+\item Pero este proceso se puede optimizar, en realidad uno podría comparar contra todos los números enteros que sean menor que $l = n/2$ puesto que si un número  mayor que $l$ es divisor de $n$ el resultado sería un número $<2$ lo que no tiene sentido . Por lo tanto se puede reducir el numero de casos a probar (A la mitad!!).
+\item Pero este proceso se puede optimizar (Si, aún más) , en realidad uno podría comparar contra todos los números enteros que sean menor que $k = \sqrt{n}$ puesto que si un número  mayor que $k$ es divisor de $n$ el resultado será un número $<k$. Por lo tanto se puede reducir el numero de casos a probar.
+
+
+\end{enumerate}
+
+
+
+
+
+
+ miremos un ejemplo paso a paso:
+
+Supongamos que trabajamos con el número $46$ y queremos hallar todos sus divisores. podríamos probar con una calculadora y vamos a encontrar que las soluciones son: $[1, 2, 23, 46]$ el número de soluciones es 4! si hubiésemos probado con la primer forma, eran 44 intentos (el 1 y el 46 eran triviales pero los números del 2 al 45 no). Con el segundo método reducíamos a la mitad, 22 intentos (del 2 al 23). y por último, con el método del final eran unos $\text{floor} (\sqrt{46}) = 6$ intentos (en realidad 5, el 1 ya sabemos que cumple... ).  Esto no parece significativo en un principio, pero a medida que el número a evaluar se hace más y más grande, más se marca también la diferencia.
+
+
+\begin{itemize}
+\item Programar el método descrito en 1.
+\item Programar el método descrito en 2.
+\item Programar el método descrito en 3.
+\item Realizar una medición de tiempo de cada uno de los tres métodos, y compararlos, para los siguientes números: $[9 , 53, 126,534,5313120]$
+
+\end{itemize}
+
+
+
+
+\subsubsection*{\underline{Ejercicio 6}}
+
+Cuando se realiza el producto de dos matrices cuadradas $A$ y $B$, se calculan los coeficientes del resultado $C=A . B$ como:
+
+$$c_{i,j} = \sum_{k=0}^n a_{i,k}\  b_{k,j}$$
+
+\begin{itemize}
+\item Realice un programa para calcular el producto de dos matrices cuadradas. 
+\item Mida el tiempo que tarda dicho programa en realizar el producto con matrices de orden: $[5,10,20,50,75,100,150,200,250,300,400,500]$.
+\item Compare utilizando el producto propio del software (en MatLab es $A*B$).
+\end{itemize}
+
+
+
+
+
+
+
+\end{document}
