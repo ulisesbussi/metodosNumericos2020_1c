@@ -13,23 +13,37 @@ grid on
 
 
 plot(x,f(x),'k','lineWidth',3)
-
 plot([a,b],[0,0],'k','lineWidth',.5)
-plot([a,b],[f(a),f(b)],'--b','lineWidth',1.5)
+plot([a,b],[f(a),f(b)],'--b','lineWidth',2)
 
-c = 
+c = a +f(a) *(b-a)/(f(a)-f(b));
+plot([a,a,c,a],[0,f(a),0,0],'r')
+
+
+plot([b,b,c,b],[0,f(b),0,0],'m')
+
+
+plot([a,b],[f(a),f(b)],'--b','lineWidth',2)
+
+c_annot = annotation('textbox','interpreter','latex','String','$\bf \hat c$','FitBoxToText','on');
+a_annot = annotation('textbox','interpreter','latex','String','$\bf a$','FitBoxToText','on');
+b_annot = annotation('textbox','interpreter','latex','String','$\bf b$','FitBoxToText','on');
+c_annot.FontSize=15;
+a_annot.FontSize=15;
+b_annot.FontSize=15;
 
 
 %%
 
 
-plot(c1,f(c1),'ob','lineWidth',3)
-plot(c,f(c),'ob','lineWidth',3)
+figure(1)
+hold on
+grid on
 
+plot(x,f(x),'k','lineWidth',3)
+plot([a,b],[0,0],'k','lineWidth',.5)
+plot([a,b],[f(a),f(b)],'--b','lineWidth',2)
 
-c2 = (c1+c)/2;
-
-plot(c2,f(c2),'or','lineWidth',2)
-plot([c2,c2],[f(b),f(c2)],'--r','lineWidth',.5)
-
-b1 = c;
+c = a +f(a) *(b-a)/(f(a)-f(b));
+plot(c,f(c),'or','lineWidth',2)
+plot([c,c],[0,f(c)],'--r')

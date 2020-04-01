@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  30 MAR 2020 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  1 APR 2020 16:30
 entering extended mode
-**./clase1.tex
-(clase1.tex
+**./clase2.tex
+(clase2.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 ("C:\Program Files\MiKTeX 2.9\tex/latex/beamer\beamer.cls"
@@ -1136,11 +1136,11 @@ File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \c@lema=\count375
 \c@teor=\count376
 \c@coro=\count377
- (D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase1.aux
+ (D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase2.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-\openout1 = `clase1.aux'.
+\openout1 = `clase2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
 LaTeX Font Info:    ... okay on input line 123.
@@ -1256,10 +1256,10 @@ LaTeX Info: Redefining \ref on input line 123.
 LaTeX Info: Redefining \pageref on input line 123.
 LaTeX Info: Redefining \nameref on input line 123.
 
-(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase1.out)
-(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase1.out)
+(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase2.out)
+(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase2.out)
 \@outlinefile=\write8
-\openout8 = `clase1.out'.
+\openout8 = `clase2.out'.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/translator\translator-basic-dictionary-
@@ -1292,8 +1292,8 @@ LaTeX Info: Redefining \% on input line 123.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase1.nav)
-<logoUnq.png, id=30, 178.6675pt x 67.25125pt>
+(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase2.nav)
+<logoUnq.png, id=46, 178.6675pt x 67.25125pt>
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
 Package pdftex.def Info: logoUnq.png  used on input line 123.
@@ -1344,14 +1344,14 @@ Package pdftex.def Info: logoUnq.png  used on input line 141.
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 161.
+Package pdftex.def Info: logoUnq.png  used on input line 162.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [3
 
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 161.
+Package pdftex.def Info: logoUnq.png  used on input line 162.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
 
 [4
@@ -1359,212 +1359,400 @@ Package pdftex.def Info: logoUnq.png  used on input line 161.
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 182.
+Package pdftex.def Info: logoUnq.png  used on input line 173.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [5
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 201.
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 203.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [6
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 222.
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 222.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [7
 
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 222.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [8
 
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 222.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [9
 
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 222.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [10
 
 ]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 201.
+Package pdftex.def Info: logoUnq.png  used on input line 222.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
  [11
 
 ]
-<Biseccion/f0.png, id=265, 421.575pt x 316.18124pt>
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 222.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [12
+
+]
+<Biseccion/f0.png, id=463, 421.575pt x 316.18124pt>
 File: Biseccion/f0.png Graphic file (type png)
 <use Biseccion/f0.png>
-Package pdftex.def Info: Biseccion/f0.png  used on input line 215.
+Package pdftex.def Info: Biseccion/f0.png  used on input line 236.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (28.04655pt too wide) detected at line 215
+Overfull \hbox (28.04655pt too wide) detected at line 236
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2) = 3 \OML/cmbrm/m/it/10.95 ;  f\O
 T1/cmbr/m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 15
  []
 
 
-Overfull \hbox (2.22305pt too wide) detected at line 215
+Overfull \hbox (2.22305pt too wide) detected at line 236
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2)\OML/cmbrm/m/it/10.95 :f\OT1/cmbr
 /m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 45
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 215.
+Package pdftex.def Info: logoUnq.png  used on input line 236.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[12
+[13
 
  <./Biseccion/f0.png (PNG copy)>]
-<Biseccion/f1.png, id=283, 421.575pt x 316.18124pt>
+<Biseccion/f1.png, id=494, 421.575pt x 316.18124pt>
 File: Biseccion/f1.png Graphic file (type png)
 <use Biseccion/f1.png>
-Package pdftex.def Info: Biseccion/f1.png  used on input line 228.
+Package pdftex.def Info: Biseccion/f1.png  used on input line 249.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (4.40904pt too wide) detected at line 228
+Overfull \hbox (4.40904pt too wide) detected at line 249
 \OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = [] = 3[]5
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 228.
+Package pdftex.def Info: logoUnq.png  used on input line 249.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[13
+[14
 
  <./Biseccion/f1.png (PNG copy)>]
-<Biseccion/f2.png, id=302, 421.575pt x 316.18124pt>
+<Biseccion/f2.png, id=524, 421.575pt x 316.18124pt>
 File: Biseccion/f2.png Graphic file (type png)
 <use Biseccion/f2.png>
-Package pdftex.def Info: Biseccion/f2.png  used on input line 242.
+Package pdftex.def Info: Biseccion/f2.png  used on input line 263.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (40.18266pt too wide) detected at line 242
+Overfull \hbox (40.18266pt too wide) detected at line 263
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2) = 3 \OML/cmbrm/m/it/10.95 ;  f\O
 T1/cmbr/m/n/10.95 (3[]5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 1[]5
  []
 
 
-Overfull \hbox (14.35916pt too wide) detected at line 242
+Overfull \hbox (14.35916pt too wide) detected at line 263
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2)\OML/cmbrm/m/it/10.95 :f\OT1/cmbr
 /m/n/10.95 (1[]5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 4[]5
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 242.
+Package pdftex.def Info: logoUnq.png  used on input line 263.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[14
+[15
 
  <./Biseccion/f2.png (PNG copy)>]
-<Biseccion/f3.png, id=320, 421.575pt x 316.18124pt>
+<Biseccion/f3.png, id=554, 421.575pt x 316.18124pt>
 File: Biseccion/f3.png Graphic file (type png)
 <use Biseccion/f3.png>
-Package pdftex.def Info: Biseccion/f3.png  used on input line 256.
+Package pdftex.def Info: Biseccion/f3.png  used on input line 277.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (19.10013pt too wide) detected at line 256
+Overfull \hbox (19.10013pt too wide) detected at line 277
 \OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = [] = 2[]75
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 256.
+Package pdftex.def Info: logoUnq.png  used on input line 277.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[15
+[16
 
  <./Biseccion/f3.png (PNG copy)>]
-<Biseccion/f4.png, id=338, 421.575pt x 316.18124pt>
+<Biseccion/f4.png, id=584, 421.575pt x 316.18124pt>
 File: Biseccion/f4.png Graphic file (type png)
 <use Biseccion/f4.png>
-Package pdftex.def Info: Biseccion/f4.png  used on input line 270.
+Package pdftex.def Info: Biseccion/f4.png  used on input line 291.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (75.31352pt too wide) detected at line 270
+Overfull \hbox (75.31352pt too wide) detected at line 291
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2[]75) = 1[]875 \OML/cmbrm/m/it/10.
 95 ;  f\OT1/cmbr/m/n/10.95 (3[]5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 1
 []5
  []
 
 
-Overfull \hbox (20.10785pt too wide) detected at line 270
+Overfull \hbox (20.10785pt too wide) detected at line 291
 \OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2)\OML/cmbrm/m/it/10.95 :f\OT1/cmbr
 /m/n/10.95 (1[]5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 2[]81
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 270.
+Package pdftex.def Info: logoUnq.png  used on input line 291.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[16
+[17
 
  <./Biseccion/f4.png (PNG copy)>]
-<Biseccion/f5.png, id=356, 421.575pt x 316.18124pt>
+<Biseccion/f5.png, id=614, 421.575pt x 316.18124pt>
 File: Biseccion/f5.png Graphic file (type png)
 <use Biseccion/f5.png>
-Package pdftex.def Info: Biseccion/f5.png  used on input line 284.
+Package pdftex.def Info: Biseccion/f5.png  used on input line 305.
 (pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
 
-Overfull \hbox (39.5399pt too wide) detected at line 284
+Overfull \hbox (39.5399pt too wide) detected at line 305
 \OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = [] = 3[]125
  []
 
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 284.
+Package pdftex.def Info: logoUnq.png  used on input line 305.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
-[17
+[18
 
  <./Biseccion/f5.png (PNG copy)>]
 File: logoUnq.png Graphic file (type png)
 <use logoUnq.png>
-Package pdftex.def Info: logoUnq.png  used on input line 302.
+Package pdftex.def Info: logoUnq.png  used on input line 323.
 (pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
- [18
+ [19
+
+]
+<FalsaPosicion/triangulosSemejantes.png, id=674, 421.575pt x 316.18124pt>
+File: FalsaPosicion/triangulosSemejantes.png Graphic file (type png)
+<use FalsaPosicion/triangulosSemejantes.png>
+Package pdftex.def Info: FalsaPosicion/triangulosSemejantes.png  used on input 
+line 348.
+(pdftex.def)             Requested size: 147.55345pt x 110.66508pt.
+
+Overfull \hbox (9.27396pt too wide) in paragraph at lines 348--348
+[][] 
+ []
+
+
+Overfull \hbox (46.37828pt too wide) detected at line 348
+[]
+ []
+
+
+Overfull \vbox (2.76945pt too high) detected at line 348
+ []
+
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 348.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+[20
+
+ <./FalsaPosicion/triangulosSemejantes.png (PNG copy)>]
+<FalsaPosicion/f1.png, id=704, 421.575pt x 316.18124pt>
+File: FalsaPosicion/f1.png Graphic file (type png)
+<use FalsaPosicion/f1.png>
+Package pdftex.def Info: FalsaPosicion/f1.png  used on input line 370.
+(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
+
+Overfull \hbox (28.04655pt too wide) detected at line 370
+\OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2) = 3 \OML/cmbrm/m/it/10.95 ;  f\O
+T1/cmbr/m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 15
+ []
+
+
+Overfull \hbox (2.22305pt too wide) detected at line 370
+\OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2)\OML/cmbrm/m/it/10.95 :f\OT1/cmbr
+/m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 45
+ []
+
+
+Overfull \hbox (18.3399pt too wide) detected at line 370
+\OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = 2 + 3[]
+ []
+
+
+Overfull \vbox (0.69795pt too high) detected at line 370
+ []
+
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 370.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+[21
+
+ <./FalsaPosicion/f1.png (PNG copy)>]
+<FalsaPosicion/f2.png, id=734, 421.575pt x 316.18124pt>
+File: FalsaPosicion/f2.png Graphic file (type png)
+<use FalsaPosicion/f2.png>
+Package pdftex.def Info: FalsaPosicion/f2.png  used on input line 387.
+(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
+
+Overfull \hbox (45.93135pt too wide) detected at line 387
+\OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2[]5) = 2[]5 \OML/cmbrm/m/it/10.95 
+;  f\OT1/cmbr/m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 15
+ []
+
+
+Overfull \hbox (45.1671pt too wide) detected at line 387
+\OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = 2[]5 + 2[]5[]
+ []
+
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 387.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+[22
+
+ <./FalsaPosicion/f2.png (PNG copy)>]
+<FalsaPosicion/f3.png, id=764, 421.575pt x 316.18124pt>
+File: FalsaPosicion/f3.png Graphic file (type png)
+<use FalsaPosicion/f3.png>
+Package pdftex.def Info: FalsaPosicion/f3.png  used on input line 405.
+(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
+
+Overfull \hbox (80.42348pt too wide) detected at line 405
+\OML/cmbrm/m/it/10.95 f\OT1/cmbr/m/n/10.95 (2[]8571) = 1[]5306 \OML/cmbrm/m/it/
+10.95 ;  f\OT1/cmbr/m/n/10.95 (5) = \OMS/cmbrs/m/n/10.95  \OT1/cmbr/m/n/10.95 1
+5
+ []
+
+
+Overfull \hbox (96.90529pt too wide) detected at line 405
+\OML/cmbrm/m/it/10.95 c[] \OT1/cmbr/m/n/10.95 = 2[]8571 + 1[]5306[]
+ []
+
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 405.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+[23
+
+ <./FalsaPosicion/f3.png (PNG copy)>]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 424.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [24
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 424.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [25
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 424.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [26
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 424.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [27
+
+]
+<FalsaPosicion/malaConvergencia.png, id=914, 421.575pt x 316.18124pt>
+File: FalsaPosicion/malaConvergencia.png Graphic file (type png)
+<use FalsaPosicion/malaConvergencia.png>
+Package pdftex.def Info: FalsaPosicion/malaConvergencia.png  used on input line
+ 440.
+(pdftex.def)             Requested size: 189.70699pt x 142.28024pt.
+
+Overfull \hbox (20.69662pt too wide) in paragraph at lines 440--440
+[][] 
+ []
+
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 440.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+[28
+
+ <./FalsaPosicion/malaConvergencia.png (PNG copy)>]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 458.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [29
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 458.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [30
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 458.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [31
+
+]
+File: logoUnq.png Graphic file (type png)
+<use logoUnq.png>
+Package pdftex.def Info: logoUnq.png  used on input line 458.
+(pdftex.def)             Requested size: 44.66676pt x 16.81276pt.
+ [32
 
 ]
 \tf@nav=\write9
-\openout9 = `clase1.nav'.
+\openout9 = `clase2.nav'.
 
 \tf@toc=\write10
-\openout10 = `clase1.toc'.
+\openout10 = `clase2.toc'.
 
 \tf@snm=\write11
-\openout11 = `clase1.snm'.
+\openout11 = `clase2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 463.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 463.
 
-(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase1.aux
+(D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\clase2.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
-Package rerunfilecheck Info: File `clase1.out' has not changed.
-(rerunfilecheck)             Checksum: 205F874E8D2307E07C291DAB0083F878;253.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 463.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 463.
+Package rerunfilecheck Info: File `clase2.out' has not changed.
+(rerunfilecheck)             Checksum: CD48ECEA978BF4A9C29C5096175546AA;510.
  ) 
 Here is how much of TeX's memory you used:
- 28387 strings out of 480934
- 579747 string characters out of 2909676
- 848544 words of memory out of 3000000
- 43581 multiletter control sequences out of 15000+200000
+ 28477 strings out of 480934
+ 581154 string characters out of 2909676
+ 855034 words of memory out of 3000000
+ 43636 multiletter control sequences out of 15000+200000
  565378 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,19n,80p,791b,814s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1584,9 +1772,9 @@ elvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 Output written on D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase2\build\cl
-ase1.pdf (18 pages, 204744 bytes).
+ase2.pdf (32 pages, 419024 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 41 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1179 PDF objects out of 1200 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

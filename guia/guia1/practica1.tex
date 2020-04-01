@@ -1,0 +1,205 @@
+
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+\usepackage{enumerate}
+
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+
+\title{Guía 1}
+
+\author{Ulises Bussi, Universidad Nacional de Quilmes}
+
+\date{01/01/2014}
+
+\maketitle \vspace{20pt}
+
+\section{Bracketing methods}
+%
+\subsubsection*{Ejercicio 1}
+
+Encuentre las raices de las siguientes funciones:
+
+\begin{enumerate}
+\begin{minipage}{.6\linewidth}
+\item $f(x) = 3x^2 + 5x -6$ entre $[-5,-1]$ y $[-1,5]$
+\item $g(x) = 0.3x^2 -cos(x)$ en $[0,2]$
+\end{minipage}\begin{minipage}{.4\linewidth}
+\item $h(x) = x\cos(x)$ en $[1,500]$
+\item $i(x) = e^{-x^2} -e^{x/5}+2$ en $[0,6]$
+\end{minipage}
+$$j(x) = x^2 -2x +1, \text{ en } [0,3]$$
+
+
+\begin{itemize}
+\item Utilizando el método de la bisección, con un error relativo de $1\%$
+\item Utilizando el método de la falsa posición, que coincida en los primeros dos decimales después de la coma con el método anterior.  
+\item Grafique las funciones en el intervalo dado.
+\end{itemize}
+En ambos casos cuente el número de iteraciones y comparelos. ¿Que sucede con $j(x)$?
+
+\end{enumerate}
+
+\subsubsection*{Ejercicio 2}
+
+La velocidad de caida de un paracaidista está dada por:
+$$\displaystyle v = \frac{gm}{c} (1 - e^{ -(c/m) t})$$
+Donde $g=9.81 m/s^2$ es la gravedad, el coeficiente de arrastre $c$ vale $15kg/s$ si se sabe que $v= 36 m/s$ a tiempo $t=10$ calcule la masa del paracaidista, utilizando el método de la falsa posición tal que el error relativo sea menor que $e_r < 0.1\%$
+
+
+\subsubsection*{Ejercicio 3}
+
+La curva de temperatura de un tanque de maceración industrial de cerveza en función del tiempo viene dada por la ecuación:
+$$ T(t) = 100 - 80e^{t/3000}$$
+;ientras la entrega de combustible está habilitada. Para una maceración exitosa se propone llevar el mosto a una temperatura de de $67^\circ C$ . ¿Cuanto tiempo lleva el calentamiento hasta la temperatura ideal? Calcule utilizando el método de bisección, con un error absoluto de $0.1^\circ C$
+
+\subsubsection*{Ejercicio 4}
+
+De acuerdo al principio de flotabilidad de Arquímedes, el empuje generado por un cuerpo es igual al peso del volumen desplazado del fluido. Si se tiene una esfera de radio $1m$ y densidad $\rho = 200kg/m^3$ que se sumerge parcialmente en agua (de densidad $\rho_{agua}=1000kg/m^3$. Calcule la altura h de de la esfera sobresale del agua  cuando la misma se encuentra en equilibrio. Establezca el método y criterio de error a utilizar.
+
+Ayuda: se puede calcular el el volumen por arriba del agua como:
+$V = \frac{\pi h^2}{3} (3r-h)$
+
+
+
+
+
+
+
+
+
+\section*{Opcionales}
+
+\subsection*{I}
+Cree una función que permita calcular raices de una función utilizando el método de la bisección, y tome como parámetros de entrada la función a analizar, el intervalo, número de iteraciones a realizar.
+
+\subsection*{II}
+Cree una función que permita calcular raices de una función utilizando el método de la falsa posición, y tome como parámetros de entrada la función a analizar, el intervalo, número de iteraciones a realizar.
+
+
+\subsection*{III}
+Cree una nueva función que llame a \textbf{I} y permita además establecer un criterio de parada por error absoluto y relativo.
+
+\subsection*{IV}
+Idem \textbf{III} pero llamando a \textbf{II}.
+
+
+
+
+\end{document}

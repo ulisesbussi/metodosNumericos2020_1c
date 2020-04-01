@@ -127,7 +127,7 @@
 	\titlepage
 \end{frame}
 
-
+\section{Lo que repito todas las clases}
 \begin{frame}
 \frametitle{Antes de empezar}
 \begin{tcolorbox}
@@ -140,6 +140,7 @@
 
 \end{frame}
 
+\section{Introducción}
 \begin{frame}
 \frametitle{Bracketing Methods.}
 
@@ -159,6 +160,26 @@ $"$Encuentra$"$ raices en un intervalo cerrado definido.
 
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Bracketing Methods.}
+\textbf{Consideraciones:}
+\begin{itemize}
+\item Encuentran aproximadamente el valor de la raiz.
+\item Requieren definir el intervalo.
+\item Requieren que haya solo una raiz en el intervalo.
+
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
 
 \section{Método de la Bisección}
 \begin{frame}
@@ -284,11 +305,11 @@ $$ a = c_3$$
 \end{frame}
 
 
-\section{Falsa Posición}
 
 \section{Método de la Falsa Posición}
+
 \begin{frame}
-\frametitle{Método de la bisección}
+\frametitle{Método de la Falsa Posición}
 
 Basado en el teorema de Bolsano.\vspace{12pt}
 
@@ -300,6 +321,143 @@ Basado en el teorema de Bolsano.\vspace{12pt}
 \end{enumerate}
 
 \end{frame}
+
+\begin{frame}
+\frametitle{Método de la Falsa Posición}
+
+\begin{minipage}{.45\linewidth}
+\includegraphics[scale=.35]{FalsaPosicion/triangulosSemejantes.png} 
+
+Se forman dos triangulos semejantes!
+
+\end{minipage} \begin{minipage}{.45\linewidth}
+
+\[\arraycolsep=1pt\def\arraystretch{2}
+\begin{array}{ccc}
+\frac{f(a)}{c-a} & = & \frac{f(b)}{c-b} \\
+f(a)(c-b) & = & f(b)(c-a)\\
+c [f(a)-f(b)] & = & f(a)b - f(b)a \\\vspace{5pt}
+c & = & \frac{f(a)b-f(b)a}{f(a)-f(b)}\\
+c & = & \frac{ f(a)b-f(b)a {\color{red} +f(a)a-f(a)a }  }{ f(a)-f(b) }\\
+\end{array}
+\]
+$$ \boxed{ c  = a + f(a)\frac{b-a}{f(a)-f(b)} } $$
+
+
+\end{minipage}
+\end{frame}
+
+
+
+
+
+\subsection{Ejemplo Falsa Posición}
+
+\begin{frame}
+\frametitle{Falsa Posición: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{FalsaPosicion/f1.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2)=3 \,,\,f(5)=-15$$
+$$f(2).f(5) = -45$$\vspace{7pt}
+$$c_1 = 2 +3\frac{5-2}{3-(-15)}$$
+$$c_1 = = 2.5 $$
+$$f(c_1) = 2.5 $$\vspace{7pt}
+$$ a = c_1$$
+\end{minipage}
+\end{frame}
+
+%frame2
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{FalsaPosicion/f2.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2.5)=2.5 \,,\,f(5)=-15$$\vspace{7pt}
+$$c_2 = 2.5 +2.5\frac{5-2.5}{2.5-(-15)}$$
+$$c_2 = = 2.8571 $$
+$$f(c_2) = 1.5306 $$\vspace{7pt}
+$$ a = c_2$$
+
+\end{minipage}
+\end{frame}
+
+
+%frame3
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{FalsaPosicion/f3.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2.8571)=1.5306 \,,\,f(5)=-15$$\vspace{7pt}
+$$c_2 = 2.8571 +1.5306\frac{5-2.8571}{1.5306-(-15)}$$
+$$c_2 = = 3.0556 $$
+$$f(c_2) = 0.7716 $$\vspace{7pt}
+$$ a = c_2$$
+
+\end{minipage}
+\end{frame}
+
+\subsection{Consideraciones}
+
+\begin{frame}
+\frametitle{Falsa Posición}
+
+Error relativo en la iteración $i$: $e_i = \frac{|\hat c_i-\hat c_{i-1}|}{\hat c_i} $
+
+\pause
+\textbf{Consideraciones:}
+\begin{itemize}
+  \item El intervalo de busqueda \textbf{NO} se reduce a la mitad en cada iteración.
+  \pause
+  \item La convergencia de este método suele ser más rápida aunque el intervalo de   busqueda no reduce acorde con esto.
+  \pause
+  \item Con determinadas funciones la convergencia es lenta.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Falsa Posición}
+
+$$f(x) = e^{ (x-2)^2} - 15 $$
+\begin{minipage}{.55\linewidth}
+\includegraphics[scale=.45]{FalsaPosicion/malaConvergencia.png}
+\end{minipage}
+\begin{minipage}{.4\linewidth}
+Este es un ejemplo de donde pude ocurrir la mala convergencia.
+
+
+\end{minipage}
+
+\end{frame}
+
+
+
+\section{Criterios de parada}
+
+\begin{frame}
+\frametitle{Criterios de parada}
+¿Cuándo nos detenemos?
+\pause
+\begin{itemize}
+\item El error absoluto llega a un valor aceptable (el intervalo en el cual bisco la raiz se achicó x. ej. a $1e-4$).
+\pause
+\item El error relativo del paso deja de ser significante (x. ej. el error relativo disminuye menos de $0.1\%$ en cada iteración).
+\pause
+\item El numero de iteraciones supera un número máximo  (x. ej. $1000$ iteraciones).
+\end{itemize}
+
+\end{frame}
+
+
 
 
 \end{document}

@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Lo que repito todas las clases}{2}{0}{1}
+\beamer@sectionintoc {2}{Introducción}{3}{0}{2}
+\beamer@sectionintoc {3}{Método de la Bisección}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Ejemplo Bisección}{13}{0}{3}
+\beamer@sectionintoc {4}{Método de la Falsa Posición}{19}{0}{4}
+\beamer@subsectionintoc {4}{1}{Ejemplo Falsa Posición}{21}{0}{4}
+\beamer@subsectionintoc {4}{2}{Consideraciones}{24}{0}{4}
+\beamer@sectionintoc {5}{Criterios de parada}{29}{0}{5}
