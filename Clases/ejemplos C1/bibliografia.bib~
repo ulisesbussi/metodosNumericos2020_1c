@@ -1,0 +1,186 @@
+@book{oppenheim1998senales,
+  title={Se{\~n}ales y sistemas},
+  author={Oppenheim, Alan V and Willsky, Alan S and Nawab, S Hamid},
+  year={1998},
+  publisher={Pearson Educaci{\'o}n}
+}
+
+@Book{Franklin,
+  author =	 {Gene F. Franklin, J.David Powel \and  Abbas Emami-Naeini},
+  title = 	 {Control de Sistemas Dinámicos con Retroalimentación},
+  publisher = 	 {Addison-Wesley Iberoamericana},
+  year = 	 1991
+}
+
+@Book{Matrix,
+  author =	 {Gene H. Golub \and Charles F. Van Loan},
+  title = 	 {Matrix Computations},
+  publisher = 	 {Johns Hopkins},
+  year = 	 1996,
+ }
+
+@Book{Goodwin,
+  author =	 {Graham C. Goodwin, Stefan F. Graebe  Mario E. Salgado},
+  title = 	 {Control System Design},
+  publisher = 	 {Valparíso},
+  year = 	 2000
+}
+
+
+@Book{Ogata,
+  author =	 {Katsiuko Ogata},
+  title = 	 {Control Moderno},
+  publisher = 	 {Pentice Hall},
+  year = 	 1998
+}
+
+
+@book{khalil,
+  title={Nonlinear systems},
+  author={Khalil, Hassan K and Grizzle, JW},
+  volume={3},
+  year={1996},
+  publisher={Prentice hall New Jersey}
+}
+
+@book{Slotine,
+  title={Applied nonlinear control},
+  author={Slotine, Jean-Jacques E and Li, Weiping and others},
+  volume={60},
+  year={1991},
+  publisher={Prentice-Hall Englewood Cliffs, NJ}
+}
+
+@Book{Corke2011,
+author = {P. Corke },
+title = {Robotics, vision and control: fundamental algorithms in MATLAB},
+publisher = {Springer Science \& Business Media.},
+year = {2011},
+OPTvolume = {73},
+}
+
+@Book{Ljung,
+author = {Lennart Ljung},
+title = {System Identification. Theory for the User},
+publisher = {Prentice Hall  PTR},
+year = {1999},
+}
+
+@book{sira2004,
+  title={Differentially flat systems},
+  author={Sira-Ramirez, Hebertt and Agrawal, Sunil K},
+  year={2004},
+  publisher={CRC Press}
+}
+
+@book{brockett1983,
+  title={Asymptotic stability and feedback stabilization},
+  author={Brockett, Roger W and others},
+  year={1983},
+  publisher={Citeseer}
+}
+
+@article{Review,
+  title={Wheeled mobile robots: a review},
+  author={Ortigoza, Silva and Aranda, MM and Ortigoza, GS and Guzm{\'a}n, VMH and Vilchis, MAM and Gonz{\'a}lez, GS and Lozada, JCH and Carbajal, MO},
+  journal={IEEE Latin America Transactions},
+  volume={10},
+  number={6},
+  pages={2209--2217},
+  year={2012},
+  publisher={Institute of Electrical and Electronics Engineers, Inc., 3 Park Avenue, 17 th Fl New York NY 10016-5997 United States}
+}
+@article{getting1993,
+  title={Perspective/navigation-the global positioning system},
+  author={Getting, Ivan Alexander},
+  journal={Spectrum, IEEE},
+  volume={30},
+  number={12},
+  pages={36--38},
+  year={1993},
+  publisher={IEEE}
+}
+
+@article{misra1999,
+  title={Special issue on global positioning system},
+  author={Misra, P and Enge, P},
+  journal={Proc IEEE},
+  volume={87},
+  number={1},
+  pages={3--15},
+  year={1999}
+}
+
+
+@InProceedings{wang1988,
+  title={Location estimation and uncertainty analysis for mobile robots},
+  author={Wang, C Ming},
+  booktitle={Robotics and Automation, 1988. Proceedings., 1988 IEEE International Conference on},
+  pages={1231--1235},
+  year={1988},
+  organization={IEEE}
+}
+
+@article{MD1,
+  title={Sliding mode control for trajectory tracking of nonholonomic wheeled mobile robots},
+  author={Yang, Jung-Min and Kim, Jong-Hwan},
+  journal={Robotics and Automation, IEEE Transactions on},
+  volume={15},
+  number={3},
+  pages={578--587},
+  year={1999},
+  publisher={IEEE}
+}
+@article{MD2,
+  title={Sliding-mode tracking control of nonholonomic wheeled mobile robots in polar coordinates},
+  author={Chwa, Dongkyoung},
+  journal={Control Systems Technology, IEEE Transactions on},
+  volume={12},
+  number={4},
+  pages={637--644},
+  year={2004},
+  publisher={IEEE}
+}
+
+@inproceedings{fierro,
+  title={Control of a nonholonomic mobile robot: backstepping kinematics into dynamics},
+  author={Fierro, Rafael and Lewis, Frank L},
+  booktitle={Decision and Control, 1995., Proceedings of the 34th IEEE Conference on},
+  volume={4},
+  pages={3805--3810},
+  year={1995},
+  organization={IEEE}
+}
+
+@article{jimenez,
+  title={Estimaci{\'o}n de la posici{\'o}n de un Robot M{\'o}vil},
+  author={Jim{\'e}nez, Javier Gonz{\'a}lez and Baturone, Anibal Ollero},
+  journal={Autom{\'a}tica},
+  number={29},
+  pages={3--18},
+  year={1996}
+}
+
+@inproceedings{kanayama1990stable,
+  title={A stable tracking control method for an autonomous mobile robot},
+  author={Kanayama, Yutaka and Kimura, Yoshihiko and Miyazaki, Fumio and Noguchi, Tetsuo},
+  booktitle={Robotics and Automation, 1990. Proceedings., 1990 IEEE International Conference on},
+  pages={384--389},
+  year={1990},
+  organization={IEEE}
+}
+
+@inproceedings{scaglia,
+  title={Seguimiento de Trayectorias de Robots M{\'o}viles Usando el m{\'e}todo de Integraci{\'o}n Trapezoidal},
+  author={Scaglia, Gustavo and Mut, V and Quintero, O and Di Sciascio, Fernando},
+  booktitle={XX Congreso Argentino de Control Autom{\'a}tico AADECA},
+  year={2006}
+}
+
+@online{marvelmind,
+  author = {MarvelMind},
+  title = {Indoor GPS},
+  year = 2016,
+  url = http://www.marvelmind.com/},
+  urldate = {2016-01-30}
+}

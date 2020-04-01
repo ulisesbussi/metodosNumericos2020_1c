@@ -1,0 +1,317 @@
+%----------------------------------------------------------------------
+\documentclass[xcolor=svgnames]{beamer} %, handout
+\usetheme{lined}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}   
+\usepackage{times}
+\usepackage{geometry}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+
+\usepackage{algorithm2e}
+
+%\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage{fancybox}
+\usepackage{tabularx}
+%\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{siunitx} % para \degree
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+
+
+
+%\usepackage[most]{tcolorbox}
+
+
+\theoremstyle{plain}
+\newtheorem{definicion}{Definición}
+
+
+
+\definecolor{redUnq}{rgb}{.7,.1,.1}
+\definecolor{redUnq2}{rgb}{.5,.1,.3}
+
+\mode<presentation>{
+	%\usetheme{Boxes}
+	%\usecolortheme[RGB={237,132,8}]{structure}
+	%\usecolortheme[RGB={205,173,0}]{structure}
+	\usecolortheme[RGB={100,10,10}]{structure}
+
+	%\beamertemplateshadingbackground{SteelBlue!70}{Honeydew!10}
+	%\usetheme{Warsaw}
+	%\usecolortheme{default}
+	\usetheme{Singapore}
+	%\usetheme{Lined}
+	%\usetheme[height=7mm]{Rochester} 
+	\setbeamerfont{title}{shape=\bfseries,family=\rmfamily}
+	%\usefonttheme[onlylarge]{structuresmallcapsserif}
+	%\usefonttheme[onlysmall]{structurebold}
+	\setbeamercolor{title}{fg=redUnq,bg=gray!40}
+	\usefonttheme{professionalfonts}
+	\setbeamercovered{highly dynamic}
+	\setbeamercovered{transparent=10}
+	\setbeamertemplate{navigation symbols}{}
+	\colorlet{structure}{redUnq}
+
+	\setbeamertemplate{frametitle}[default][left]
+}
+
+\definecolor{verzul}{rgb}{0, 0.5,0.5}
+
+\renewcommand{\textbf}[1]{{\bfseries\textcolor{redUnq2}{#1}}}
+\renewcommand{\emph}[1]{{\em\textcolor{redUnq2}{#1}}}
+
+\setlength{\parindent}{0pt}
+\theoremstyle{definition}
+\newtheorem{ejem}{Ejemplo}
+\newtheorem{defi}{Definición}
+\newtheorem{ejer}{Ejercicio}
+\newtheorem{prop}{Propiedad}
+\newtheorem{lema}{Lema}
+\newtheorem{teor}{Teorema}
+\newtheorem{coro}{Corolario}
+
+ 
+
+\newcommand{\Rset}{\mathbbmss{R}}
+\newcommand{\Cset}{\mathbbmss{C}}
+\newcommand{\PD}[2]{\frac{\partial #1}{\partial #2}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\rango}{rango}
+
+\newenvironment{Boxedminipage}%
+{\begin{Sbox}\begin{minipage}}%
+{\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+
+
+
+\title{Métodos Numéricos - Clase 2}
+  \logo{\includegraphics[scale=0.25]{logoUnq} }
+\author{Ulises Bussi- Javier Portillo}
+%\institute{\scalebox{2}{\includegraphics[scale=0.1]{mdp02.jpg}}} %{Departamento de Ciencia y Tecnología\\ Universidad Nacional de Quilmes\\ }
+\date{ $1^\circ$ cuatrimestre 2020} 
+
+
+%%%%%%%%% Para que al comenzar una section aparezca el Contenido
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenidos de la Presentación}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+
+
+
+\begin{document} 
+
+
+\begin{frame} %\thispagestyle{empty}
+	\titlepage
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Antes de empezar}
+\begin{tcolorbox}
+	\begin{defi} \vspace{15pt}
+
+		Un método numérico es un procedimiento que permite obtener, \textbf{de forma aproximada}, solución a un problema, por medio de la aplicación de algoritmos.
+	\end{defi}
+\end{tcolorbox}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Bracketing Methods.}
+
+Métodos para encontrar raices de funciones de forma numérica.\vspace{10pt}
+
+
+\begin{tcolorbox}
+  \begin{center}
+    brackets $\rightarrow$ [ ]
+  \end{center}
+\end{tcolorbox} \vspace{20pt}
+\pause
+
+
+$"$Encuentra$"$ raices en un intervalo cerrado definido.
+
+
+
+\end{frame}
+
+\section{Método de la Bisección}
+\begin{frame}
+\frametitle{Método de la bisección}
+
+Basado en el teorema de Bolsano:
+
+\begin{tcolorbox}
+\begin{teor}
+	Dada $f(x)$ una función continua en el cerrado $[a,b]$ Si $f(a).f(b)<0 \rightarrow c \in [a,b]\, /\, f(c)=0$
+
+\end{teor}
+\end{tcolorbox}\vspace{12pt}
+
+\begin{enumerate}
+  \item Se propone $\hat c = \frac{a+b}{2} $ como candidato a raiz.
+  \item Se evalúa $f(\hat c)$ si $f(\hat c).f(a)>0 \rightarrow  a=\hat c$ (idem b). 
+  \item  Se repite hasta llegar a una tolerancia aceptable.
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Método de la bisección}
+
+Error relativo en la iteración $i$: $e_i = \frac{|\hat c_i-\hat c_{i-1}|}{\hat c_i} $ $\rightarrow$ $\boxed{ e_i= \frac{b_i-a_i}{b_i+a_i}}$\vspace{10pt}
+\pause
+\textbf{Consideraciones:}
+\begin{itemize}
+\pause
+\item El intervalo de busqueda se reduce a la mitad en cada iteración.
+\pause
+\item El error relativo también!
+\pause
+\item Podemos calcular el error en cualquier paso $i$ a \textit{priori}.
+\pause
+\item El error absoluto en un paso $i$ será: $E_i = \frac{b-a}{2^i}$
+\end{itemize}
+
+\end{frame}
+
+\subsection{Ejemplo Bisección}
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f0.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2)=3 \,,\,f(5)=-15$$\vspace{7pt}
+$$f(2).f(5) = -45$$\vspace{7pt}
+
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f1.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$c_1 = \frac{2+5}{2} = 3.5 $$\vspace{7pt}
+$$f(c_1) = -1.5 $$\vspace{7pt}
+$$ b = c_1$$
+\end{minipage}
+\end{frame}
+
+%frame3
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f2.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2)=3 \,,\,f(3.5)=-1.5$$\vspace{7pt}
+$$f(2).f(1.5) = -4.5$$\vspace{7pt}
+
+\end{minipage}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f3.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$c_2 = \frac{2+3.5}{2} = 2.75 $$\vspace{7pt}
+$$f(c_2) = 1.875 $$\vspace{7pt}
+$$ a = c_2$$
+
+\end{minipage}
+\end{frame}
+
+
+%frame5
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f4.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$f(2.75)=1.875 \,,\,f(3.5)=-1.5$$\vspace{7pt}
+$$f(2).f(1.5) = -2.81$$\vspace{7pt}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Bisección: un ejemplo}
+Tomemos $f(x) = -2x^2+8x-5, \, a=2, \, b=5$
+\begin{minipage}{.7\linewidth}
+\includegraphics[scale=.5]{Biseccion/f5.png} 
+\end{minipage}
+\begin{minipage}{.25\linewidth}
+$$c_3 = \frac{2.75+3.5}{2} = 3.125 $$\vspace{7pt}
+$$f(c_3) = 0.46 $$\vspace{7pt}
+$$ a = c_3$$
+\end{minipage}
+\end{frame}
+
+
+\section{Falsa Posición}
+
+\section{Método de la Falsa Posición}
+\begin{frame}
+\frametitle{Método de la bisección}
+
+Basado en el teorema de Bolsano.\vspace{12pt}
+
+
+\begin{enumerate}
+  \item Se propone $\hat c$ uniendo $f(a)$ y $f(b)$ con una recta y encontrando la raiz de la recta.
+  \item Se evalúa $f(\hat c)$ si $f(\hat c).f(a)>0 \rightarrow  a=\hat c$ (idem b). 
+  \item  Se repite hasta llegar a una tolerancia aceptable.
+\end{enumerate}
+
+\end{frame}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+
+
+
+
+
+
