@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  1 APR 2020 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  6 APR 2020 13:08
 entering extended mode
 **./practica1.tex
 (practica1.tex
@@ -334,9 +334,14 @@ LaTeX Warning: Command \underbar  has changed.
 LaTeX Warning: Command \underline  has changed.
                Check if current package is valid.
 
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks31
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip49
+\enit@outerparindent=\dimen176
+\enit@toks=\toks31
+\enit@inbox=\box60
+\enit@count@id=\count191
+\enitdp@description=\count192
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tex-gyre\tgheros.sty"
 Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
@@ -352,7 +357,7 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
@@ -361,49 +366,49 @@ Package: amstext 2000/06/29 v2.01 AMS text
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
-\ex@=\dimen176
+\ex@=\dimen177
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen177
+\pmbraise@=\dimen178
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count191
+\inf@bad=\count193
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count192
-\leftroot@=\count193
+\uproot@=\count194
+\leftroot@=\count195
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count194
-\DOTSCASE@=\count195
+\classnum@=\count196
+\DOTSCASE@=\count197
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box60
-\strutbox@=\box61
-\big@size=\dimen178
+\Mathstrutbox@=\box61
+\strutbox@=\box62
+\big@size=\dimen179
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count196
-\c@MaxMatrixCols=\count197
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
 \dotsspace@=\muskip16
-\c@parentequation=\count198
-\dspbrk@lvl=\count199
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
 \tag@help=\toks33
-\row@=\count266
-\column@=\count267
-\maxfields@=\count268
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
 \andhelp@=\toks34
-\eqnshift@=\dimen179
-\alignsep@=\dimen180
-\tagshift@=\dimen181
-\tagwidth@=\dimen182
-\totwidth@=\dimen183
-\lineht@=\dimen184
+\eqnshift@=\dimen180
+\alignsep@=\dimen181
+\tagshift@=\dimen182
+\tagwidth@=\dimen183
+\totwidth@=\dimen184
+\lineht@=\dimen185
 \@envbody=\toks35
-\multlinegap=\skip50
-\multlinetaggap=\skip51
+\multlinegap=\skip51
+\multlinetaggap=\skip52
 \mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
@@ -426,22 +431,13 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headfont=\toks39
 \thm@notefont=\toks40
 \thm@headpunct=\toks41
-\thm@preskip=\skip52
-\thm@postskip=\skip53
-\thm@headsep=\skip54
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
 \dth@everypar=\toks42
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/enumitem\enumitem.sty"
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip55
-\enit@outerparindent=\dimen185
-\enit@toks=\toks43
-\enit@inbox=\box62
-\enit@count@id=\count269
-\enitdp@description=\count270
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
@@ -525,8 +521,8 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex")
 \pgffor@iter=\dimen195
 \pgffor@skip=\dimen196
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
@@ -586,7 +582,7 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutheight=\dimen267
 \Gm@layouthoffset=\dimen268
 \Gm@layoutvoffset=\dimen269
-\Gm@dimlist=\toks46
+\Gm@dimlist=\toks45
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg"))
 \c@defi=\count293
@@ -607,7 +603,7 @@ s
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
 \lst@mode=\count294
 \lst@gtempboxa=\box113
-\lst@token=\toks47
+\lst@token=\toks46
 \lst@length=\count295
 \lst@currlwidth=\dimen270
 \lst@column=\count296
@@ -667,12 +663,12 @@ File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 \scratchbox=\box116
 \nofMPsegments=\count304
 \nofMParguments=\count305
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks47
 \MPscratchCnt=\count306
 \MPscratchDim=\dimen275
 \MPnumerator=\count307
 \makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks48
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -719,19 +715,19 @@ Overfull \hbox (29.08817pt too wide) in paragraph at lines 131--131
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 141
+LaTeX Font Info:    Trying to load font information for U+msa on input line 161
 .
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 141
+LaTeX Font Info:    Trying to load font information for U+msb on input line 161
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 1
-51.
+71.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tex-gyre\ts1qhv.fd"
 File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
@@ -747,13 +743,13 @@ This may cause the page layout to be inconsistent, however.
 ]
 [2] (D:\Ulises\mnum\metodosNumericos2020_1c\guia\guia1\build\practica1.aux) ) 
 Here is how much of TeX's memory you used:
- 17859 strings out of 480934
- 342071 string characters out of 2909676
- 757015 words of memory out of 3000000
- 33414 multiletter control sequences out of 15000+200000
+ 17843 strings out of 480934
+ 341857 string characters out of 2909676
+ 756630 words of memory out of 3000000
+ 33400 multiletter control sequences out of 15000+200000
  568366 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,12n,75p,834b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 59i,11n,75p,834b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ts1.enc}{C:/Program Files
 /MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/Program Files/MiKTeX 2.9/font
@@ -767,7 +763,7 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/public/tex-gyre/qhvb.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/tex-gyre/qhvr.pfb>
 Output written on D:\Ulises\mnum\metodosNumericos2020_1c\guia\guia1\build\pract
-ica1.pdf (2 pages, 121032 bytes).
+ica1.pdf (2 pages, 120981 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
