@@ -9,7 +9,7 @@
 \usepackage{tcolorbox}
 \usepackage{sectsty}
 \usepackage{enumitem}
-
+\usepackage{circuitikz}
 \renewcommand\familydefault{\sfdefault}
 \usepackage{tgheros}
 \usepackage{amsmath,amssymb,amsthm,textcomp}
@@ -122,87 +122,90 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \begin{document}
 
 
-\title{Guía 1}
+\title{Guía 2}
 
-\author{Ulises Bussi, Universidad Nacional de Quilmes}
+\author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
 
 \date{01/01/2014}
 
 \maketitle \vspace{20pt}
 
-\section*{Bracketing methods}
+\section*{Métodos Abiertos}
 %
-En principio esta guía está desarrollada para generar código que permita utilizar los métodos vistos en clase y adquirir habilidad en la programación. La idea principal es que les quede ya programados los métodos como funciones. 
-
-
-
-
 
 \subsection*{Algoritmos}
 
 \begin{enumerate}[label=\Roman*]
 
-\item \label{enum:bisec} Cree una función que permita calcular raices de una función utilizando el método de la bisección, y tome como parámetros de entrada la función a analizar, el intervalo, número de iteraciones a realizar.
+\item \label{enum:fixedPoint} Cree una función que permita calcular raíces de una función utilizando el método del punto fijo, y tome como parámetros de entrada la función a analizar, la condición inicial y número de iteraciones a realizar.
 
-\item \label{enum:falseP} Cree una función que permita calcular raices de una función utilizando el método de la falsa posición, y tome como parámetros de entrada la función a analizar, el intervalo, número de iteraciones a realizar.
+\item \label{enum:newtonRaphson} Cree una función que permita calcular raíces de una función utilizando el método de Newton-Raphson, y tome como parámetros de entrada la función a analizar, la condición inicial y número de iteraciones a realizar.
+
+\item \label{enum:secante} Cree una función que permita calcular raíces de una función utilizando el método de la secante, y tome como parámetros de entrada la función a analizar, la condiciones inicial y número de iteraciones a realizar.
 
 
-\item \label{enum:errStop} Cree una nueva función que llame a \ref{enum:bisec} y permita además establecer un criterio de parada por error absoluto y relativo.
+\item \label{enum:errStop} Cree una nueva función que llame a \ref{enum:fixedPoint},\ref{enum:newtonRaphson},\ref{enum:secante} y permita además establecer un criterio de parada por error absoluto y relativo.
 
-\item Idem \ref{enum:errStop} pero llamando a \ref{enum:falseP} .
 
 \end{enumerate}
 \subsubsection*{Ejercicio 1}
 
 Encuentre las raices de las siguientes funciones:
 
-\begin{enumerate}
-\begin{minipage}{.6\linewidth}
-\item $f(x) = 3x^2 + 5x -6$ entre $[-5,-1]$ y $[-1,5]$
-\item $g(x) = 0.3x^2 -cos(x)$ en $[0,2]$
-\end{minipage}\begin{minipage}{.4\linewidth}
-\item $h(x) = x\cos(x)$ en $[1,500]$
-\item $i(x) = e^{-x^2} -e^{x/5}+2$ en $[0,6]$
-\end{minipage}
-$$j(x) = x^2 -2x +1, \text{ en } [0,3]$$
-
-
-\begin{itemize}
-\item Utilizando el método de la bisección, con un error relativo de $1\%$
-\item Utilizando el método de la falsa posición, que coincida en los primeros dos decimales después de la coma con el método anterior.  
-\item Grafique las funciones en el intervalo dado.
-\end{itemize}
-En ambos casos cuente el número de iteraciones y comparelos. ¿Que sucede con $j(x)$?
+\begin{enumerate}	
+\item $f(x) = 3x^2 + 5x -6$ con  $x_0 \in [1,5]$
+\item $g(x) = 0.3x^2 -cos(x)$ con $x_0 \in [0,2]$
+\item $h(x) = cos(x^2-1)e^{\sqrt[3]{\sin x  (x^2 -x +1)}}\log{(x^6+\frac{x}{x^2-1})}$ con $x_0 \in [1,2]$
 
 \end{enumerate}
 
+\begin{itemize}
+\item Utilizando el método de la \textbf{punto fijo}, con un error relativo de $1\%$, ¿puede asegurar de antemando la convergencia o divergencia?
+\item Utilizando el método de Newton-Raphson y método de la secante. Compare el número de iteraciones utilizado por cada método para llegar a valores similares de error. ¿Qué método utilizaría en cada caso? por qué?
+
+\end{itemize}
+
+
 \subsubsection*{Ejercicio 2}
 
-La velocidad de caida de un paracaidista está dada por:
-$$\displaystyle v = \frac{gm}{c} (1 - e^{ -(c/m) t})$$
-Donde $g=9.81 m/s^2$ es la gravedad, el coeficiente de arrastre $c$ vale $15kg/s$ si se sabe que $v= 36 m/s$ a tiempo $t=10$ calcule la masa del paracaidista, utilizando el método de la falsa posición tal que el error relativo sea menor que $e_r < 0.1\%$
-
+Utilice el método de Newton-Raphson para determianr la raiz real de 
+$f(x) = -2+6x-4x^2+0.5 x^3$, usando como condición inicial
+\textbf{(a)} 4.5 y \textbf{(b)} 4.43. ¿Qué sucede? ¿Cómo podría explicarlo?
 
 \subsubsection*{Ejercicio 3}
 
-La curva de temperatura de un tanque de maceración industrial de cerveza en función del tiempo viene dada por la ecuación:
-$$ T(t) = 100 - 80e^{t/3000}$$
-;ientras la entrega de combustible está habilitada. Para una maceración exitosa se propone llevar el mosto a una temperatura de de $67^\circ C$ . ¿Cuanto tiempo lleva el calentamiento hasta la temperatura ideal? Calcule utilizando el método de bisección, con un error absoluto de $0.1^\circ C$
+La fórmula de dividir y promediar, es un método de aproximación de la raiz cuadrada 
+de un número positivo real $a$. Este método se basa en calcular el candidato a solución
+$$ x_{i+1} = \frac{x_i+ a/x_i}{2}$$
+Pruebe que puede llegarse a esta fórmula partiendo del método de Newton-Raphson.
 
 \subsubsection*{Ejercicio 4}
 
-De acuerdo al principio de flotabilidad de Arquímedes, el empuje generado por un cuerpo es igual al peso del volumen desplazado del fluido. Si se tiene una esfera de radio $1m$ y densidad $\rho = 200kg/m^3$ que se sumerge parcialmente en agua (de densidad $\rho_{agua}=1000kg/m^3$. Calcule la altura h de de la esfera sobresale del agua  cuando la misma se encuentra en equilibrio. Establezca el método y criterio de error a utilizar.
+La impedancia ($Z$) de un circuito RLC en paralelo , como el de la figura \ref{fig:elec},puede calcularse como:
+$$\frac{1}{Z} = \sqrt{\frac{1}{R^2}+ 1(\omega C - \frac{1}{\omega L})^2}$$
 
-Ayuda: se puede calcular el el volumen por arriba del agua como:
-$V = \frac{\pi h^2}{3} (3r-h)$
+encuentre la frecuencia angular $\omega$ que hace que la impedancia $Z=100\Omega$ utilizando como condición inicial $\omega = 1$ y $\omega = 1000$, utilice el método de la secante, y la función propia de matlab fzero.
+
+\begin{figure}[h!]
+    \centering
+    \begin{circuitikz} \draw
+        (0,0) to[sinusoidal voltage source, o-o] (0,3) 
+        (3,0) to[R,label=\mbox{$R$}, o-o]   (3,3)
+        (6,0) to[L,label=\mbox{$L$}, o-o]   (6,3)
+        (9,0) to[C,label=\mbox{$C$}, o-o]   (9,3)
+        (0,0) -- (3,0) -- (6,0) --(9,0)
+        (0,3)-- (3,3) -- (6,3) --(9,3)
+        ;
+    \end{circuitikz}
+	\label{fig:elec}    
+    \caption{Circuito ejercicio 4. }
+    
+\end{figure}
 
 
+\subsubsection*{Ejercicio 5}
 
-
-
-
-
-
+¿Cuáles son las diferencias entre el método de la Secante y el método de la falsa posición?.
 
 
 

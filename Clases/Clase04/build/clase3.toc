@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción}{2}{0}{1}
+\beamer@sectionintoc {2}{Iteración de Punto Fijo}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Ejemplo Punto Fijo}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ejemplo 2 Punto Fijo}{13}{0}{2}
+\beamer@subsectionintoc {2}{3}{Convergencia de Punto Fijo}{17}{0}{2}
+\beamer@sectionintoc {3}{Newthon-Raphson}{18}{0}{3}
+\beamer@subsectionintoc {3}{1}{NR un ejemplo}{20}{0}{3}
+\beamer@subsectionintoc {3}{2}{NR ejemplo 2}{24}{0}{3}
+\beamer@subsectionintoc {3}{3}{Consideraciones}{28}{0}{3}
+\beamer@sectionintoc {4}{Método de la secante}{29}{0}{4}
+\beamer@subsectionintoc {4}{1}{Secante un ejemplo}{30}{0}{4}
+\beamer@subsectionintoc {4}{2}{Método de la secante: Consideraciones}{34}{0}{4}
