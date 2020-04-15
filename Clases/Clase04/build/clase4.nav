@@ -1,0 +1,80 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\sectionentry {1}{Introducci\IeC {\'o}n}{2}{Introducci\IeC {\'o}n}{0}}
+\headcommand {\slideentry {1}{0}{1}{2/3}{}{0}}
+\headcommand {\beamer@framepages {2}{3}}
+\headcommand {\slideentry {1}{0}{2}{4/5}{}{0}}
+\headcommand {\beamer@framepages {4}{5}}
+\headcommand {\beamer@sectionpages {2}{5}}
+\headcommand {\beamer@subsectionpages {2}{5}}
+\headcommand {\sectionentry {2}{Matriz Triangular}{6}{Matriz Triangular}{0}}
+\headcommand {\slideentry {2}{0}{1}{6/6}{}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{7}{Algoritmo de Remonte}}
+\headcommand {\slideentry {2}{1}{1}{7/7}{Algoritmo de Remonte}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {2}{1}{2}{8/8}{Algoritmo de Remonte}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {2}{1}{3}{9/9}{Algoritmo de Remonte}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionpages {7}{9}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{10}{Ejemplo Algoritmo de Remonte}}
+\headcommand {\slideentry {2}{2}{1}{10/14}{Ejemplo Algoritmo de Remonte}{0}}
+\headcommand {\beamer@framepages {10}{14}}
+\headcommand {\beamer@sectionpages {6}{14}}
+\headcommand {\beamer@subsectionpages {10}{14}}
+\headcommand {\sectionentry {3}{Eliminaci\IeC {\'o}n Gaussiana}{15}{Eliminaci\IeC {\'o}n Gaussiana}{0}}
+\headcommand {\slideentry {3}{0}{1}{15/17}{}{0}}
+\headcommand {\beamer@framepages {15}{17}}
+\headcommand {\beamer@subsectionpages {15}{17}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{18}{Eliminaci\IeC {\'o}n Gaussiana: un ejemplo}}
+\headcommand {\slideentry {3}{1}{1}{18/18}{Eliminaci\IeC {\'o}n Gaussiana: un ejemplo}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {3}{1}{2}{19/22}{Eliminaci\IeC {\'o}n Gaussiana: un ejemplo}{0}}
+\headcommand {\beamer@framepages {19}{22}}
+\headcommand {\slideentry {3}{1}{3}{23/23}{Eliminaci\IeC {\'o}n Gaussiana: un ejemplo}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionpages {18}{23}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{24}{Consideraciones}}
+\headcommand {\slideentry {3}{2}{1}{24/26}{Consideraciones}{0}}
+\headcommand {\beamer@framepages {24}{26}}
+\headcommand {\beamer@sectionpages {15}{26}}
+\headcommand {\beamer@subsectionpages {24}{26}}
+\headcommand {\sectionentry {4}{Pivoteo}{27}{Pivoteo}{0}}
+\headcommand {\slideentry {4}{0}{1}{27/28}{}{0}}
+\headcommand {\beamer@framepages {27}{28}}
+\headcommand {\slideentry {4}{0}{2}{29/30}{}{0}}
+\headcommand {\beamer@framepages {29}{30}}
+\headcommand {\beamer@subsectionpages {27}{30}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{31}{Consideraciones}}
+\headcommand {\slideentry {4}{1}{1}{31/32}{Consideraciones}{0}}
+\headcommand {\beamer@framepages {31}{32}}
+\headcommand {\beamer@sectionpages {27}{32}}
+\headcommand {\beamer@subsectionpages {31}{32}}
+\headcommand {\sectionentry {5}{Descomposici\IeC {\'o}n LU}{33}{Descomposici\IeC {\'o}n LU}{0}}
+\headcommand {\slideentry {5}{0}{1}{33/34}{}{0}}
+\headcommand {\beamer@framepages {33}{34}}
+\headcommand {\slideentry {5}{0}{2}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\beamer@subsectionpages {33}{35}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{36}{Matrices Elementales}}
+\headcommand {\slideentry {5}{1}{1}{36/36}{Matrices Elementales}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{1}{2}{37/37}{Matrices Elementales}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{1}{3}{38/38}{Matrices Elementales}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionpages {36}{38}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{39}{Descomposici\IeC {\'o}n LU}}
+\headcommand {\slideentry {5}{2}{1}{39/39}{Descomposici\IeC {\'o}n LU}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {5}{2}{2}{40/40}{Descomposici\IeC {\'o}n LU}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {39}{40}}
+\headcommand {\beamer@sectionpages {33}{40}}
+\headcommand {\beamer@documentpages {40}}
+\headcommand {\gdef \inserttotalframenumber {23}}
