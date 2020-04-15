@@ -9,5 +9,6 @@
 \beamer@sectionintoc {4}{Pivoteo}{27}{0}{4}
 \beamer@subsectionintoc {4}{1}{Consideraciones}{31}{0}{4}
 \beamer@sectionintoc {5}{Descomposici\IeC {\'o}n LU}{33}{0}{5}
-\beamer@subsectionintoc {5}{1}{Matrices Elementales}{36}{0}{5}
-\beamer@subsectionintoc {5}{2}{Descomposici\IeC {\'o}n LU}{39}{0}{5}
+\beamer@subsectionintoc {5}{1}{Matrices Elementales}{39}{0}{5}
+\beamer@subsectionintoc {5}{2}{Descomposici\IeC {\'o}n LU}{42}{0}{5}
+\beamer@subsectionintoc {5}{3}{Ejemplo LU}{44}{0}{5}

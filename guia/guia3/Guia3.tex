@@ -1,0 +1,186 @@
+
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+
+\title{Guía 2}
+
+\author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
+
+
+\maketitle \vspace{20pt}
+
+\section*{Métodos Abiertos}
+%
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item \label{enum:remonte} Aplique el algoritmo de remonte explicado en clase para encontrar la solución del sistema de ecuaciones de forma $U x =b$ donde U es una matriz triangular superior. Esta función debe tomar como entrada una matriz $U$ y el vector $b$ y devolver el vector $x$.
+
+\item \label{enum:descenso} Aplique el algoritmo de descenso para encontrar la solución del sistema de ecuaciones de forma $L x =b$ donde U es una matriz triangular inferior.Esta función debe tomar como entrada una matriz $L$ y el vector $b$ y devolver el vector $x$.
+
+
+
+\item \label{enum:gaussJordan} Cree una función que permita resolver el problema $A x=b$ utilizando Gauss-Jordan.
+
+\item \label{enum:pivot} Cree una función que permita resolver el problema $A x=b$ utilizando Gauss-Jordan con pivoteo parcial.
+
+
+\item \label{enum:LU} Cree una función que tome como entrada una matriz $A$ y devuelva las matrices $L$ y $U$ propias del algoritmo de descomposición LU.
+
+
+\item \label{enum:errStop} Cree una nueva función que llame a \ref{enum:remonte},\ref{enum:descenso} y \ref{enum:LU} para resolver el problema $A x=b$
+
+
+\end{enumerate}
+
+\subsubsection*{Ejercicio 1}
+Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
+\begin{itemize}
+\item Algoritmo de Remonte.
+\item Algoritmo de Descenso.
+\item Factorización LU.
+\end{itemize}
+
+\subsubsection*{Ejercicio 2}
+Encuentre la solución a los siguentes sistemas de ecuaciones aplicando descomposición LU:
+
+\begin{itemize}
+\item[a] $\left\lbrace \begin{array}{ccc}
+10x_1 +2x_2 -x_3 & = & 27 \\
+-3x_1 -6x_2 +2x_3 & = & -61.5 \\
+x_1 +x_2 +5x_3 & = & -21.5 \\
+\end{array} \right.$ , cambiando $b$ por $b= \begin{bmatrix}
+12\\
+18\\
+-6
+\end{bmatrix}$
+\item[b] $\left\lbrace \begin{array}{ccc}
+3x_1 -2x_2 +x_3 & = & -10 \\
+2x_1 +6x_2 -4x_3 & = & 44 \\
+-x_1 -2x_2 +5x_3 & = & -26 \\
+\end{array} \right.$
+\end{itemize}
+
+\end{document}
