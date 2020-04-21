@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Introducción Metodos iterativos}{3}{0}{1}
+\beamer@sectionintoc {2}{Método de Gauss-Seidel}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Ejemplo Gauss-Seidel}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Convergencia de Gauss-Seidel}{25}{0}{2}
+\beamer@subsectionintoc {2}{3}{Consideraciones}{29}{0}{2}
+\beamer@sectionintoc {3}{Método de Gauss-Seidel con relajación}{30}{0}{3}
+\beamer@subsectionintoc {3}{1}{Ejemplo Gauss-Seidel con relajación}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{Elección de $\alpha $}{39}{0}{3}

@@ -1,0 +1,685 @@
+%----------------------------------------------------------------------
+\documentclass[xcolor=svgnames]{beamer} %, handout
+\usetheme{lined}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{cmbright}   
+\usepackage{times}
+\usepackage{geometry}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+
+\usepackage{algorithm2e}
+
+%\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{floatflt}
+\usepackage{fancybox}
+\usepackage{tabularx}
+%\usepackage[all]{xy}
+\usepackage{color}
+\usepackage{siunitx} % para \degree
+\usepackage{mathtools}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows,matrix,positioning}
+
+
+\usetikzlibrary{positioning}
+\usepackage{arydshln} %poder pone lineas punteadas en matrices
+
+
+
+
+%\usepackage[most]{tcolorbox}
+
+
+\theoremstyle{plain}
+\newtheorem{definicion}{Definición}
+
+
+
+\definecolor{redUnq}{rgb}{.7,.1,.1}
+\definecolor{redUnq2}{rgb}{.5,.1,.3}
+
+\mode<presentation>{
+	%\usetheme{Boxes}
+	%\usecolortheme[RGB={237,132,8}]{structure}
+	%\usecolortheme[RGB={205,173,0}]{structure}
+	\usecolortheme[RGB={100,10,10}]{structure}
+
+	%\beamertemplateshadingbackground{SteelBlue!70}{Honeydew!10}
+	%\usetheme{Warsaw}
+	%\usecolortheme{default}
+	\usetheme{Singapore}
+	%\usetheme{Lined}
+	%\usetheme[height=7mm]{Rochester} 
+	\setbeamerfont{title}{shape=\bfseries,family=\rmfamily}
+	%\usefonttheme[onlylarge]{structuresmallcapsserif}
+	%\usefonttheme[onlysmall]{structurebold}
+	\setbeamercolor{title}{fg=redUnq,bg=gray!40}
+	\usefonttheme{professionalfonts}
+	\setbeamercovered{highly dynamic}
+	\setbeamercovered{transparent=10}
+	\setbeamertemplate{navigation symbols}{}
+	\colorlet{structure}{redUnq}
+
+	\setbeamertemplate{frametitle}[default][left]
+}
+
+\definecolor{verzul}{rgb}{0, 0.5,0.5}
+
+\renewcommand{\textbf}[1]{{\bfseries\textcolor{redUnq2}{#1}}}
+\renewcommand{\emph}[1]{{\em\textcolor{redUnq2}{#1}}}
+
+\setlength{\parindent}{0pt}
+\theoremstyle{definition}
+\newtheorem{ejem}{Ejemplo}
+\newtheorem{defi}{Definición}
+\newtheorem{ejer}{Ejercicio}
+\newtheorem{prop}{Propiedad}
+\newtheorem{lema}{Lema}
+\newtheorem{teor}{Teorema}
+\newtheorem{coro}{Corolario}
+
+ 
+
+\newcommand{\Rset}{\mathbbmss{R}}
+\newcommand{\Cset}{\mathbbmss{C}}
+\newcommand{\PD}[2]{\frac{\partial #1}{\partial #2}}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\rango}{rango}
+
+\newenvironment{Boxedminipage}%
+{\begin{Sbox}\begin{minipage}}%
+{\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+
+
+
+\title{Métodos Numéricos - Clase 3}
+  \logo{\includegraphics[scale=0.25]{logoUnq} }
+\author{Ulises Bussi- Javier Portillo}
+%\institute{\scalebox{2}{\includegraphics[scale=0.1]{mdp02.jpg}}} %{Departamento de Ciencia y Tecnología\\ Universidad Nacional de Quilmes\\ }
+\date{ $1^\circ$ cuatrimestre 2020} 
+
+
+%%%%%%%%% Para que al comenzar una section aparezca el Contenido
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contenidos de la Presentación}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Métodos Iterativos}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+
+\begin{document} 
+
+
+\begin{frame} %\thispagestyle{empty}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+\section{Introducción Metodos iterativos}
+
+\begin{frame}
+\frametitle{Sistemas de ecuaciones Lineales (SELs).}
+
+\vspace{10pt}
+
+
+\begin{tcolorbox}
+\textbf{Resolver problemas de la forma}
+$$A x = b $$
+con $ A \in \mathbb{R}^{n\times n}$, $b$ y $x\in \mathbb{R}^{n\times 1}$
+\end{tcolorbox} \vspace{20pt}
+
+\textbf{¿Por qué?}
+\pause
+La mayoría de los problemas de ingeniería pueden llevarse a esta forma.
+
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Métodos iterativos}
+\begin{itemize}
+\item Aproximar la solución iterando.
+\pause
+\item Útil para sistemas grandes.
+
+\end{itemize}
+\end{frame}
+
+
+
+\section{Método de Gauss-Seidel}
+
+\begin{frame}
+\frametitle{Método de Gauss-Seidel}
+
+Transformar el sistema:
+{\small $$ \begin{bmatrix}
+a_{1,1} & a_{1,2} 	& \dots 	 	& a_{1,n} \\
+a_{2,1} & a_{2,2} 	& \dots	 	& a_{2,n} \\
+\vdots 	& 		  	& \ddots	 	& \vdots \\
+a_{n,1}	& a_{n,1} 	& \dots 		& a_{n,n}
+\end{bmatrix} \begin{bmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{bmatrix} =\begin{bmatrix}
+b_1\\
+b_2\\
+\vdots\\
+b_n
+\end{bmatrix} \rightarrow \displaystyle \begin{array}{ccc}
+x_{\color{red}1} & =& \frac{1}{a_{{\color{red}1,1}}}\left(b_{\color{red}1} - \sum_{\substack{i=1 \\ i\neq{\color{red}1}}}^n  a_{ {\color{red}1},i} x_i \right)\\
+x_{\color{red}2} & =& \frac{1}{a_{{\color{red}2,2}}}\left(b_{\color{red}2} - \sum_{\substack{i=1 \\ i\neq{\color{red}2}}}^n  a_{ {\color{red}2},i} x_i\right)\\
+ & \vdots & \\
+x_{\color{red}n} & =& \frac{1}{a_{{\color{red}n,n}}}\left(b_{\color{red}n} - \sum_{\substack{i=1 \\ i\neq{\color{red}n}}}^n  a_{ {\color{red}n},i} x_i\right)\\
+ 
+\end{array} $$ }
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Método de Gauss-Seidel}
+Con el sistema de la forma: $\begin{array}{ccc}
+x_1 &=& f_1(x_1,x_2,\dots,x_n)\\
+x_2 &=& f_2(x_1,x_2,\dots,x_n)\\
+&\vdots&\\
+x_n &=& f_n(x_1,x_2,\dots,x_n)
+\end{array}$
+\begin{enumerate} 
+\item Proponemos una condición inicial para todos los estados $X^0=[x_1^0,x_2^0,...,x_n^0]$
+\item encontramos $x_1^1 = f_1(x_1^0,x_2^0,\dots,x_n^0)$,
+\item encontramos $x_2^1 = f_2({x_1}^{\color{red}1},x_2^0,\dots,x_n^0)$, y así sucesivamente.
+\end{enumerate}
+\pause
+Repetimos los pasos [2] y [3]. 
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Método de Gauss-Seidel}
+Podemos escribir el error para cada una de las incógnitas $x_i$ en el paso $j$ cómo:
+$$ e_i^j = \frac{|x_i^j -x_i^{j-1}|}{x_i^j}$$
+\end{frame}
+
+
+\subsection{Ejemplo Gauss-Seidel}
+
+%paso 1
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+Supongamos que tenemos el problema:
+$$  \begin{bmatrix}
+8 & 3 & 1 \\
+1 & 5 & 3 \\
+3 & 1 & 5
+\end{bmatrix} X = \begin{bmatrix}
+12\\
+9\\
+9
+\end{bmatrix} \rightarrow \begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+Tomemos como condición inicial $X^0 = [x_1^0,x_2^0,x_2^0] = [0,0,0]$
+
+\begin{minipage}{.65\linewidth}
+\pause
+$$\begin{array}{ccc}
+x_1^1 = \frac{12-3*0-1*0}{8} &\rightarrow & \boxed{x_1^1 = 1.5}\\
+x_2^1 = \frac{9-1*{\color{red}1.5}-3*0}{5} &\rightarrow & \boxed{x_2^1 = 1.5}\\
+x_3^1 = \frac{9-3*{\color{red}1.5}-1*{\color{red}1.5}}{5} &\rightarrow & \boxed{x_3^1 = 0.6}
+\end{array}$$
+
+\end{minipage}\pause \vrule \begin{minipage}{.3\linewidth}
+con lo que mi nuevo candidato será:
+
+$$x = \begin{bmatrix}
+1.5\\
+1.5\\
+0.6
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+%paso 2
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+\begin{minipage}{.4\linewidth}
+El problema:\vspace{-5pt}
+$$\begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+mi estado actual $X^1 =[1.5,1.5,0.6]$\vspace{-5pt}
+\end{minipage} \vrule \begin{minipage}{.5\linewidth}
+\begin{center}
+  \textbf{Errores}
+\end{center}
+$$e_1^1 = \frac{|1.5 -0|}{1.5} = 1$$
+$$e_2^1 = 1$$
+$$e_3^1 = 1$$
+\end{minipage}
+
+
+
+\begin{minipage}{.65\linewidth}
+\pause
+$$\begin{array}{ccc}
+x_1^2 = \frac{12-3*1.5-1*0.6}{8} &\rightarrow & \boxed{x_1^2 = 0.86}\\
+x_2^2 = \frac{9-1*{\color{red}0.86}-3*0.6}{5} &\rightarrow & \boxed{x_2^2 = 1.26}\\
+x_3^2 = \frac{9-3*{\color{red}0.86}-1*{\color{red}1.26}}{5} &\rightarrow & \boxed{x_3^2 = 1.02}
+\end{array}$$
+
+\end{minipage}\pause \vrule \begin{minipage}{.3\linewidth}
+con lo que mi nuevo candidato será:
+
+$$x = \begin{bmatrix}
+0.86\\
+1.26\\
+1.02
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+
+%paso 3
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+\begin{minipage}{.4\linewidth}
+El problema:\vspace{-5pt}
+$$\begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+mi estado actual $X^2 =[0,86,1.26,1.02]$\vspace{-5pt}
+\end{minipage} \vrule \begin{minipage}{.5\linewidth}
+\begin{center}
+  \textbf{Errores}
+\end{center}$$e_1^2 = \frac{|0.86 -1.5|}{0.86} 	= 0.73$$
+$$e_2^2 = 0.18$$
+$$e_3^2 = 0.41$$
+\end{minipage}
+
+
+
+\begin{minipage}{.65\linewidth}
+\pause
+$$\begin{array}{ccc}
+x_1^3 = \frac{12-3*1.26-1*1.02}{8} &\rightarrow & \boxed{x_1^3 = 0.89}\\
+x_2^3 = \frac{9-1*{\color{red}0.89}-3*1.02}{5} &\rightarrow & \boxed{x_2^3 = 1.00}\\
+x_3^3 = \frac{9-3*{\color{red}0.89}-1*{\color{red}1.0}}{5} &\rightarrow & \boxed{x_3^3 = 1.06}
+\end{array}$$
+
+\end{minipage}\pause \vrule \begin{minipage}{.3\linewidth}
+con lo que mi nuevo candidato será:
+
+$$x = \begin{bmatrix}
+0.89\\
+1.00\\
+1.06
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+
+%paso 4
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+\begin{minipage}{.4\linewidth}
+El problema:\vspace{-5pt}
+$$\begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+mi estado actual $X^3 =[0,89,1.00,1.06]$\vspace{-5pt}
+\end{minipage} \vrule \begin{minipage}{.5\linewidth}
+\begin{center}
+  \textbf{Errores}
+\end{center}
+$$e_1^3 = \frac{|0.89 -0.86|}{0.89} 	= 0.03$$
+$$e_2^3 = 0.26$$
+$$e_3^3 = 0.03$$
+\end{minipage}
+
+\begin{minipage}{.65\linewidth}
+\pause
+$$\begin{array}{ccc}
+x_1^4 = \frac{12-3*1.00-1*1.02}{8} & \rightarrow & \boxed{x_1^4 = 0.99}\\
+x_2^4 = \frac{9-1*{\color{red}0.99}-3*1.06}{5} &\rightarrow & \boxed{x_2^4 = 0.96}\\
+x_3^4 = \frac{9-3*{\color{red}0.99}-1*{\color{red}0.96}}{5} &\rightarrow & \boxed{x_3^4 = 1.01}
+\end{array}$$
+
+\end{minipage}\pause \vrule \begin{minipage}{.3\linewidth}
+con lo que mi nuevo candidato será:
+$$x = \begin{bmatrix}
+0.99\\
+1.96\\
+1.01
+\end{bmatrix}$$
+\end{minipage}
+
+\end{frame}
+
+
+
+
+
+
+
+\subsection{Convergencia de Gauss-Seidel}
+\begin{frame}
+\frametitle{Convergencia de Gauss-Seidel}
+
+Puede demostrarse que el algoritmo de Gauss-Seidel es convergente si la matriz $A$ es  \textbf{diagonal dominante}.
+
+\pause
+\begin{tcolorbox}
+\textbf{Definición:} se dice que una Matriz $A in \mathbb{R}^{n\times n}$ es diagonal dominante si cumple que:
+
+$$\forall i,j=1,2,..n :\ \  |a_{i,i}| > \sum_{\substack{j=1 \\j\neq i}}^n  |a_{i,j} |$$
+\end{tcolorbox}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Convergencia de Gauss-Seidel}
+Veamos que la matriz $A$ del ejemplo es Diagonal Dominante:
+
+$$ |a_{1,1}| : 8 < |a_{1,2}| + |a_{1,3}| = 3 +1 $$
+$$ |a_{2,2}| : 5 < 1 + 3 $$
+$$ |a_{3,3}| : 5 < 1 + 3 $$
+
+\pause
+\begin{tcolorbox}
+\textbf{IMPORTANTE:}
+ Esta condición es suficiente pero no necesaria!
+\end{tcolorbox}
+
+\end{frame}
+
+\subsection{Consideraciones}
+
+\begin{frame}
+\frametitle{Consideraciones}
+
+\begin{itemize}
+\item Es un método iterativo.
+\item Sirve para aplicar en grandes sistemas.
+\item Es posible de antemano saber su convergencia.
+\end{itemize}
+\end{frame}
+
+
+\section{Método de Gauss-Seidel con relajación}
+
+\begin{frame}
+\frametitle{Gauss-Seidel con Relajación}
+Se propone una modificación al algoritmo, para mejorar la convergencia:\vspace{15pt}
+
+
+\pause
+Se calcula el valor de una incógnita $x_i^j$ y se propone utilizar como candidato a valor un promedio ponderado con el valor anterior:
+$$ \hat x_i^j = \alpha x_i^{j} + (1-\alpha) x_i^{j-1} $$
+
+Donde $\alpha$ es un parámetro a definir.
+
+\end{frame}
+
+\subsection{Ejemplo Gauss-Seidel con relajación}
+
+
+%Start
+\begin{frame}
+  \frametitle{Ejemplo: Gauss-Seidel Con relajación}
+	Supongamos que tenemos el problema:
+$$  \begin{bmatrix}
+8 & 3 & 1 \\
+1 & 5 & 3 \\
+3 & 1 & 5
+\end{bmatrix} X = \begin{bmatrix}
+12\\
+9\\
+9
+\end{bmatrix} \rightarrow \begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+Tomemos $X^0 = [x_1^0,x_2^0,x_3^0] = [0,0,0]$ y $ \alpha =0.8 $
+
+\begin{minipage}{.55\linewidth}
+\pause
+\small
+$$\begin{array}{ccc}
+x_1^1 = \frac{12-3*0-1*0}{8} &\rightarrow & \boxed{x_1^1 = 1.5}\\
+x_2^1 = \frac{9-1*{\color{red}1.2}-3*0}{5} &\rightarrow & \boxed{x_2^1 = 1.56}\\
+x_3^1 = \frac{9-3*{\color{red}1.2}-1*{\color{red}1.25}}{5} &\rightarrow & \boxed{x_3^1 = 0.83}
+\end{array}$$
+
+\end{minipage} \vrule \begin{minipage}{.4\linewidth}
+con lo que mi nuevo candidato será:
+\small
+$$x = \begin{bmatrix}
+1.5\\
+1.56\\
+0.83
+\end{bmatrix} \alpha + (1-\alpha)\begin{bmatrix}
+0\\
+0\\
+0
+\end{bmatrix} = \begin{bmatrix}
+1.2\\
+1.25\\
+0.66
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+
+
+%paso 2
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+\begin{minipage}{.4\linewidth}
+El problema:\vspace{-5pt}
+$$\begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+mi estado actual $X^1 =[1.2,1.25,0.66]$\vspace{-5pt}
+\end{minipage} \vrule \begin{minipage}{.5\linewidth}
+\begin{center}
+  \textbf{Errores}
+\end{center}
+$$e_1^1 = \frac{|1.2 -0|}{1.2} = 1$$
+$$e_2^1 = 1$$
+$$e_3^1 = 1$$
+\end{minipage}
+
+
+\begin{minipage}{.55\linewidth}
+\pause
+\small
+$$\begin{array}{cll}
+x_1^2 = \frac{12-3*1.25-1*0.66}{8} &\rightarrow & \boxed{x_1^2 = 0.95}\\
+x_2^2 = \frac{9-1*{\color{red}1.00}-3*0.66}{5} &\rightarrow & \boxed{x_2^2 = 1.20}\\
+x_3^2 = \frac{9-3*{\color{red}1}-1*{\color{red}1.21}}{5} &\rightarrow & \boxed{x_3^2 = 0.96}
+\end{array}$$
+
+\end{minipage} \vrule \begin{minipage}{.35\linewidth}
+\small
+con lo que mi nuevo candidato será:
+$$x = \begin{bmatrix}
+0.95\\
+1.20\\
+0.96
+\end{bmatrix} 0.8 +0.2\begin{bmatrix}
+1.2\\
+1.25\\
+0.66
+\end{bmatrix} = \begin{bmatrix}
+1.00\\
+1.21\\
+0.90
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+
+
+
+%paso 3
+\begin{frame}
+\frametitle{Ejemplo: Gauss-Seidel}
+
+\begin{minipage}{.4\linewidth}
+El problema:\vspace{-5pt}
+$$\begin{array}{ccc}
+x_1 &=& \frac{12-3x_2-1x_3}{8}\\
+x_2 &=& \frac{9-1x_1-3x_3}{5}\\
+x_3 &=& \frac{9-3x_1-1x_2}{5}
+\end{array}$$
+
+mi estado actual $X^2 =[1.00,1.21,0.90]$ y $\alpha=0.8$ \vspace{-5pt}
+\end{minipage} \vrule \begin{minipage}{.5\linewidth}
+\begin{center}
+  \textbf{Errores}
+\end{center}
+$$e_1^2 = \frac{|1.00 -1.2|}{1.00} = 0.2$$
+$$e_2^2 = 0.03$$
+$$e_3^2 = 0.26$$
+\end{minipage}
+
+
+\begin{minipage}{.55\linewidth}
+\pause
+\small
+$$\begin{array}{cll}
+x_1^2 = \frac{12-3*1.21-1*0.9}{8} &\rightarrow & \boxed{x_1^2 = 0.93}\\
+x_2^2 = \frac{9-1*{\color{red}0.95}-3*0.9}{5} &\rightarrow & \boxed{x_2^2 = 1.07}\\
+x_3^2 = \frac{9-3*{\color{red}0.95}-1*{\color{red}1.10}}{5} &\rightarrow & \boxed{x_3^2 = 1.01}
+\end{array}$$
+
+\end{minipage} \vrule \begin{minipage}{.35\linewidth}
+\small
+con lo que mi nuevo candidato será:
+$$x = \begin{bmatrix}
+0.93\\
+1.07\\
+1.01
+\end{bmatrix} 0.8 +0.2\begin{bmatrix}
+1.00\\
+1.21\\
+0.90
+\end{bmatrix} = \begin{bmatrix}
+0.95\\
+1.10\\
+0.99
+\end{bmatrix}$$
+
+\end{minipage}
+\end{frame}
+
+\subsection{Elección de $\alpha$}
+
+\begin{frame}
+\frametitle{Elección de $\alpha$}
+La elección es empírica entre $(0,2)$.
+
+
+\begin{itemize}
+\pause
+\item Si $\alpha=1$ se trata de Gauss-Seidel Clásico.
+\end{itemize}
+
+\textbf{Típicamente:}
+
+\begin{minipage}{.45\linewidth}
+\pause
+$\alpha \in (0,1)$: (sub-relajación) 
+
+$\hat x^j \in (x^{j-1},x^j)$, es decir un promedio.
+\pause 
+
+Ayuda si el sistema original no converge.
+\end{minipage}  \vrule  \begin{minipage}{.45\linewidth}
+\pause
+$\alpha \in (1,2)$ (sobre-relajación) 
+$\hat x^j \notin (x^{j-1},x^j)$.\vspace{10pt}
+\pause 
+
+Ayuda si converge lento.
+\end{minipage}
+
+
+
+\end{frame}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+

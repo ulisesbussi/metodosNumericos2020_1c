@@ -1,14 +1,14 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{2}{0}{1}
+\beamer@sectionintoc {1}{Introducción}{2}{0}{1}
 \beamer@sectionintoc {2}{Matriz Triangular}{6}{0}{2}
 \beamer@subsectionintoc {2}{1}{Algoritmo de Remonte}{7}{0}{2}
 \beamer@subsectionintoc {2}{2}{Ejemplo Algoritmo de Remonte}{10}{0}{2}
-\beamer@sectionintoc {3}{Eliminaci\IeC {\'o}n Gaussiana}{15}{0}{3}
-\beamer@subsectionintoc {3}{1}{Eliminaci\IeC {\'o}n Gaussiana: un ejemplo}{18}{0}{3}
+\beamer@sectionintoc {3}{Eliminación Gaussiana}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Eliminación Gaussiana: un ejemplo}{18}{0}{3}
 \beamer@subsectionintoc {3}{2}{Consideraciones}{24}{0}{3}
 \beamer@sectionintoc {4}{Pivoteo}{27}{0}{4}
 \beamer@subsectionintoc {4}{1}{Consideraciones}{31}{0}{4}
-\beamer@sectionintoc {5}{Descomposici\IeC {\'o}n LU}{33}{0}{5}
+\beamer@sectionintoc {5}{Descomposición LU}{33}{0}{5}
 \beamer@subsectionintoc {5}{1}{Matrices Elementales}{39}{0}{5}
-\beamer@subsectionintoc {5}{2}{Descomposici\IeC {\'o}n LU}{42}{0}{5}
+\beamer@subsectionintoc {5}{2}{Descomposición LU}{42}{0}{5}
 \beamer@subsectionintoc {5}{3}{Ejemplo LU}{44}{0}{5}
