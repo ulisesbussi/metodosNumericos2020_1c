@@ -1,0 +1,40 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage} % changes the margin
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+ 
+
+\begin{document}
+\renewcommand{\listtablename}{Índice de tablas} 
+\renewcommand{\tablename}{Tabla}
+\begin{center}
+\LARGE \bf Trabajo práctico número 1: \\ Vectores, matrices y funciones
+\end{center}
+
+\vspace{1cm} 
+\noindent\textbf{Materia:} M\'etodos Num\'ericos \hfill
+\textbf{Año} 2020 - 1C \\
+\hfill \\
+%\textbf{Fecha} \today \hfill \textbf{Ayudante:} Diego Hidalgo  \\ 
+%\vspace{1cm} 
+\section*{Ceros de funciones}
+
+\subsection*{Ejercicio 1}
+Utilizando su criterio, aplique un método numérico para encontrar los ceros (entre $0$ y $10$) de la función:
+$$f(x) = \left[ e^{2x+2} - e^{3x+\ln(x+1)}\right]\left[ \cos(x+1) - \ln(3x^3 +3x+2)+ t\right] $$
+Con un error estimado $e_r <0.1\%$.
+
+\subsection*{Ejercicio 2}
+Programe una función que tome como entrada una función anónima, una condición inicial, y una tolerancia; calcule el método de la secante y devuelva un vector con todos los candidatos hallados. 
+
+\subsection*{Ejercicio 3}
+Dada una función $g(x) = \frac{x}{7}^{10} -3$ ¿Qué desventajas presentaría aplicar el método de la falsa posición en el intervalo $[0,10]$? ¿Y el método de Newton-Raphson tomando como condición inicial $x_0 = 0$? ¿Que sucede con $x_0 =1$? ¿Cómo resolvería el problema? resuelvalo.
+
+
+\end{document}
+
