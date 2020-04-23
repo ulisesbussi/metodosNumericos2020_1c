@@ -7,3 +7,4 @@
 \beamer@sectionintoc {3}{Método de Gauss-Seidel con relajación}{30}{0}{3}
 \beamer@subsectionintoc {3}{1}{Ejemplo Gauss-Seidel con relajación}{33}{0}{3}
 \beamer@subsectionintoc {3}{2}{Elección de $\alpha $}{39}{0}{3}
+\beamer@sectionintoc {4}{Sistemas de Ecuaciones no lineales}{45}{0}{4}

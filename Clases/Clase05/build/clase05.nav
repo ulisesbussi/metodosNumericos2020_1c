@@ -61,8 +61,17 @@
 \headcommand {\beamer@subsectionentry {0}{3}{2}{39}{Elección de $\alpha $}}
 \headcommand {\slideentry {3}{2}{1}{39/44}{Elección de $\alpha $}{0}}
 \headcommand {\beamer@framepages {39}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {39}{44}}
 \headcommand {\beamer@sectionpages {30}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\gdef \inserttotalframenumber {22}}
+\headcommand {\beamer@subsectionpages {39}{44}}
+\headcommand {\sectionentry {4}{Sistemas de Ecuaciones no lineales}{45}{Sistemas de Ecuaciones no lineales}{0}}
+\headcommand {\slideentry {4}{0}{1}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {4}{0}{2}{46/48}{}{0}}
+\headcommand {\beamer@framepages {46}{48}}
+\headcommand {\slideentry {4}{0}{3}{49/50}{}{0}}
+\headcommand {\beamer@framepages {49}{50}}
+\headcommand {\beamer@partpages {1}{50}}
+\headcommand {\beamer@subsectionpages {45}{50}}
+\headcommand {\beamer@sectionpages {45}{50}}
+\headcommand {\beamer@documentpages {50}}
+\headcommand {\gdef \inserttotalframenumber {25}}

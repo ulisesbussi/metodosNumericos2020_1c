@@ -666,12 +666,60 @@ $\hat x^j \notin (x^{j-1},x^j)$.\vspace{10pt}
 Ayuda si converge lento.
 \end{minipage}
 
+\end{frame}
 
+\section{Sistemas de Ecuaciones no lineales}
+
+\begin{frame}
+\frametitle{Sistemas de Ecuaciones no lineales}
+Es posible extender métodos vistos a SENL.\vspace{15pt}
+\pause 
+
+Cuidado, estos sistemas son más sensibles a condiciones iniciales.\vspace{15pt}
+\pause
+
+\textbf{Ejemplo}
+Sea el sistema:
+$$\begin{array}{ccc}
+x_1^2 +x_1 x_2 &=& 10\\
+x_2 +3x_1 x_2^2 &=& 57
+\end{array}$$
+tomando $X = [1,4]$ 
+
+\end{frame}
+
+\begin{frame}
+\frametitle{SENL: ejemplo}
+Podemos despejar:
+$$\begin{array}{ccc}
+x_1 & = & \sqrt{10-x_1 x_2} \\
+x_2 & = & \sqrt{\frac{57-x_2}{3x_1}} \\
+\end{array} $$
+\pause
+Si aplicamos Gauss-Seidel
+
+\begin{minipage}{.45\linewidth}
+$$\begin{array}{lcc}
+x_1^1 = \sqrt{10 -1*4} & = & 2.44 \\
+x_2^1 = \sqrt{ \frac{57 - 4}{3* {\color{red} 2.44} }} & = & 2.68
+\end{array}  $$
+\end{minipage} \vrule \begin{minipage}{.45\linewidth}
+$$\begin{array}{lcc}
+x_1^2 = \sqrt{10 -2.44*2.68} & = & 1.84 \\
+x_2^2 = \sqrt{ \frac{57 - 2.68}{3* {\color{red} 1.84} }} & = & 3.12
+\end{array}  $$
+\end{minipage}
 
 \end{frame}
 
 
+\begin{frame}
+\frametitle{SENL: ejemplo}
+Si se sigue iterando se llegará a la solución $[x_1,x_2] = [2,3]$.
 
+\pause
+\textbf{Cuidado}, no siempre los SENL convergen, incluso esto puede variar dependiendo el despeje. Queda como tarea para casa, probar otro despeje de las ecuaciones y comprobar su divergencia.
+\end{frame}
 
 
 \end{document}
