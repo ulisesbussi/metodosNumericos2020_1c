@@ -1,0 +1,79 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{fullpage} % changes the margin
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+ 
+
+\begin{document}
+\renewcommand{\listtablename}{Índice de tablas} 
+\renewcommand{\tablename}{Tabla}
+\begin{center}
+\LARGE \bf Trabajo práctico número 2
+\end{center}
+
+\vspace{1cm} 
+\noindent\textbf{Materia:} M\'etodos Num\'ericos \hfill
+\textbf{Año} 2020 - 1C \\
+\hfill \\
+%\textbf{Fecha} \today \hfill \textbf{Ayudante:} Diego Hidalgo  \\ 
+%\vspace{1cm} 
+\section*{Ceros de funciones}
+
+\subsection*{Ejercicio 1}
+Utilizando su criterio, aplique un método numérico para encontrar los ceros (entre $0$ y $10$) de la función:
+$$f(x) = \left[ e^{2x+2} - e^{3x+\ln(x+1)}\right]\left[ \cos(x+1) - \ln(3x^3 +3x+2)+ t\right] $$
+Con un error estimado $e_r <0.1\%$.
+
+\subsection*{Ejercicio 2}
+Programe una función que tome como entrada una función anónima, una condición inicial, y una tolerancia; calcule el método de la secante y devuelva un vector con todos los candidatos hallados. 
+
+\subsection*{Ejercicio 3}
+Dada una función $g(x) = \frac{x}{7}^{10} -3$ ¿Qué desventajas presentaría aplicar el método de la falsa posición en el intervalo $[0,10]$? ¿Y el método de Newton-Raphson tomando como condición inicial $x_0 = 0$? ¿Que sucede con $x_0 =1$? ¿Cómo resolvería el problema? resuelvalo.
+
+\section*{Sistemas de ecuaciones lineales}
+
+\subsection*{Ejercicio 4}
+
+
+\begin{enumerate}[label=\alph*]
+\item- Cree una función que permita resolver el problema $A x=b$ utilizando Gauss-Jordan.
+\item- Calcule el tiempo que tarda el algoritmo (tiempo de ejecución) en resolver $A x=b$ cuando A tiene dimensión: 20,40,...,480,500.
+\item- Grafique: tiempo de ejecución versus dimensión.
+\end{enumerate}
+
+\subsection*{Ejercicio 5}
+
+Una matriz tri-diagonal, es una matriz cuyos elementos son 0, a excepción de los elementos de la diagonal principal, y las 2 diagonales adyacentes a esta. Es decir:
+
+\begin{equation} \label{myeq}
+T_N = \left[ \begin{matrix}
+a_{1,1} & a_{1,2} & \hdots & 0\\
+a_{2,1} & \ddots & \ddots &  \vdots\\
+\vdots & \ddots & \ddots & a_{n-1,n} \\
+0 & \hdots & a_{n,n-1} & a_{n,n} \end{matrix} \right]
+\end{equation}
+
+
+\begin{enumerate}[label=\alph*]
+\item- ¿Es posible aplicar la función creada en el problema 4-a si la matriz A es una matriz tri-diagonal? ¿El tiempo de ejecución cambiaría? Justifique. 
+\item- Cree una función que genere matrices tri-diagonales de dimensión \textit{n}
+
+\end{document}
+
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
