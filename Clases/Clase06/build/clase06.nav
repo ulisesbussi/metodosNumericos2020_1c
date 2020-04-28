@@ -1,0 +1,92 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Introducción Ajustes de curvas}{3}{Introducción Ajustes de curvas}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{0}{2}{4/6}{}{0}}
+\headcommand {\beamer@framepages {4}{6}}
+\headcommand {\beamer@sectionpages {3}{6}}
+\headcommand {\beamer@subsectionpages {3}{6}}
+\headcommand {\sectionentry {2}{Regresión Lineal}{7}{Regresión Lineal}{0}}
+\headcommand {\slideentry {2}{0}{1}{7/7}{}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {2}{0}{2}{8/12}{}{0}}
+\headcommand {\beamer@framepages {8}{12}}
+\headcommand {\slideentry {2}{0}{3}{13/16}{}{0}}
+\headcommand {\beamer@framepages {13}{16}}
+\headcommand {\slideentry {2}{0}{4}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@subsectionpages {7}{17}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{18}{Cuadrados Mínimos}}
+\headcommand {\slideentry {2}{1}{1}{18/20}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\slideentry {2}{1}{2}{21/21}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{1}{3}{22/22}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{1}{23}{Ejemplo}}
+\headcommand {\slideentry {2}{1}{4}{23/24}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {23}{24}}
+\headcommand {\slideentry {2}{1}{5}{25/27}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {25}{27}}
+\headcommand {\slideentry {2}{1}{6}{28/28}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsubsectionentry {0}{2}{1}{2}{29}{Coeficiente de determinación}}
+\headcommand {\slideentry {2}{1}{7}{29/29}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {2}{1}{8}{30/31}{Cuadrados Mínimos}{0}}
+\headcommand {\beamer@framepages {30}{31}}
+\headcommand {\beamer@sectionpages {7}{31}}
+\headcommand {\beamer@subsectionpages {18}{31}}
+\headcommand {\sectionentry {3}{Linealización y ajuste}{32}{Linealización y ajuste}{0}}
+\headcommand {\slideentry {3}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {3}{0}{2}{33/37}{}{0}}
+\headcommand {\beamer@framepages {33}{37}}
+\headcommand {\slideentry {3}{0}{3}{38/39}{}{0}}
+\headcommand {\beamer@framepages {38}{39}}
+\headcommand {\slideentry {3}{0}{4}{40/41}{}{0}}
+\headcommand {\beamer@framepages {40}{41}}
+\headcommand {\beamer@sectionpages {32}{41}}
+\headcommand {\beamer@subsectionpages {32}{41}}
+\headcommand {\sectionentry {4}{Ajuste Polinomial}{42}{Ajuste Polinomial}{0}}
+\headcommand {\slideentry {4}{0}{1}{42/42}{}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {4}{0}{2}{43/44}{}{0}}
+\headcommand {\beamer@framepages {43}{44}}
+\headcommand {\slideentry {4}{0}{3}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {4}{0}{4}{46/47}{}{0}}
+\headcommand {\beamer@framepages {46}{47}}
+\headcommand {\slideentry {4}{0}{5}{48/49}{}{0}}
+\headcommand {\beamer@framepages {48}{49}}
+\headcommand {\beamer@sectionpages {42}{49}}
+\headcommand {\beamer@subsectionpages {42}{49}}
+\headcommand {\sectionentry {5}{Interpolación Polinómica}{50}{Interpolación Polinómica}{0}}
+\headcommand {\slideentry {5}{0}{1}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {5}{0}{2}{51/53}{}{0}}
+\headcommand {\beamer@framepages {51}{53}}
+\headcommand {\slideentry {5}{0}{3}{54/57}{}{0}}
+\headcommand {\beamer@framepages {54}{57}}
+\headcommand {\beamer@subsectionpages {50}{57}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{58}{Interpolación de Newton}}
+\headcommand {\slideentry {5}{1}{1}{58/59}{Interpolación de Newton}{0}}
+\headcommand {\beamer@framepages {58}{59}}
+\headcommand {\slideentry {5}{1}{2}{60/61}{Interpolación de Newton}{0}}
+\headcommand {\beamer@framepages {60}{61}}
+\headcommand {\slideentry {5}{1}{3}{62/64}{Interpolación de Newton}{0}}
+\headcommand {\beamer@framepages {62}{64}}
+\headcommand {\slideentry {5}{1}{4}{65/68}{Interpolación de Newton}{0}}
+\headcommand {\beamer@framepages {65}{68}}
+\headcommand {\slideentry {5}{1}{5}{69/69}{Interpolación de Newton}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\beamer@partpages {1}{69}}
+\headcommand {\beamer@subsectionpages {58}{69}}
+\headcommand {\beamer@sectionpages {50}{69}}
+\headcommand {\beamer@documentpages {69}}
+\headcommand {\gdef \inserttotalframenumber {33}}
