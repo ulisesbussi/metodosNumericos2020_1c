@@ -120,7 +120,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \begin{document}
 
 
-\title{Guía 2}
+\title{Guía 3}
 
 \author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
 
@@ -153,7 +153,7 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \end{enumerate}
 
-\subsubsection*{Ejercicio 1}
+\subsection*{Ejercicio 1}
 Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
 \begin{itemize}
 \item Algoritmo de Remonte.
@@ -161,7 +161,7 @@ Determine el numero de operaciones de punto flotante para los siguientes algorit
 \item Factorización LU.
 \end{itemize}
 
-\subsubsection*{Ejercicio 2}
+\subsection*{Ejercicio 2}
 Encuentre la solución a los siguentes sistemas de ecuaciones aplicando Gauss-Jordan:
 
 \begin{itemize}
@@ -178,7 +178,7 @@ x_1 +x_2 +5x_3 & = & -21.5 \\
 \end{itemize}
 
 
-\subsubsection*{Ejercicio 3}
+\subsection*{Ejercicio 3}
 
 Resuelva el ejercicio 2a, pero utilizando descompusición LU, para los siguientes vectores solucion (b):
 
@@ -198,6 +198,54 @@ b_3= \begin{bmatrix}
 -1
 \end{bmatrix}$
 
+
+
+\section*{Métodos iterativos}
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item Cree una función que analice si el algoritmo iterativo de Gauss-Seidel convergerá.
+
+\item Cree una función que realice pivoteo de filas (solo con las filas que siguen) si no cumple con la condición de convergencia.
+
+\item Cree una función que realice el algoritmo de Gauss-Seidel clásico, checkeando previamente la convergencia (recuerde que es condicion suficiente pero no necesaria, así que solo muestre un mensaje por pantalla avisando esto). la Función debe tomar como parmaetro de entrada la matriz $A$ el vector $B$, un vector de tolerancia de errores y un número máximo de iteraciones para salir en caso de que no converja. 
+
+\item Cree una función que realice el algoritmo de Gauss-Seidel con relajación, permitiendo elegir el parámetro de relajación.
+ 
+\end{enumerate}
+
+
+\subsection*{Ejercicio 4}
+
+Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
+\begin{itemize}
+\item Gauss-Seidel.
+\item Gauss-Seidel con Relajación.
+\end{itemize}
+
+\subsection*{Ejercicio 5}
+
+
+Resuelva utilizando Gauss-Seidel el siguiente sistema de ecuaciones 
+$$\begin{array}{ccc}
+10x_1 +2x_2 - x_3 	&=& 27\\
+-3x_1 -6x_2 + 2x_3 	&=& -61.5\\
+x_1+x_2+ 5x_3 		&=& -21.5
+\end{array}$$
+
+\subsection*{Ejercicio 6}
+
+Resuelva el siguiente sistema de ecuaciones:
+
+$$\begin{array}{ccc}
+2x_1 -6x_2 -x_3 &=& -38\\
+-3x_1-x_2+7x_3 &=& -34\\
+-8x_1 +x_2-2x_3 &=& -20
+\end{array}$$
+
+Justifique que método utilizó para resolverlo.
 
 
 \end{document}
