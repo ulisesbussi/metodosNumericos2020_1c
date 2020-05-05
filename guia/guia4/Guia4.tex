@@ -1,0 +1,266 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+
+\title{Guía 4}
+
+\author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
+
+
+\maketitle \vspace{20pt}
+
+\section*{Mínimos Cuadrados}
+%
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item \label{enum:minCuadRec} Programe el algoritmo que le permita resolver mínimos cuadrados para una recta, tome como entrada los datos $x_i$ e $y_i$ y devuelva los parámetros $(a,b)$ de la recta $y = b + ax$.
+
+\item \label{enum:minCuadN} Es posible generalizar la expresión de mínimos cuadrados para un polinomio de orden $n$ puesto, que la primer fila tiene la suma sobre las potencias de $x$ hasta el orden $n$ igualado a la suma de los $y$. la segunda antes de realizar la suma multiplica todo por $x$, la tercera por $x^2$ y así hasta la última fila que multiplica todo por $x^n$. Dejando el sistema de la siguiente forma:
+
+$$\begin{bmatrix}
+n         & \sum x_i  		& \sum x_i^2	&\dots  & \sum x_i^n 		\\
+\sum x_i  & \sum x_i^2  	& \sum x_i^3	&\dots  & \sum x_i^{n+1} 	\\
+\vdots    &					&				&		& \vdots         	\\
+\sum x_i^n& \sum x_i^{n+1}	& \sum x_i^{n+2}&\dots  & \sum x_i{n+n}
+\end{bmatrix} \begin{bmatrix}
+a_0 \\
+a_1 \\
+\vdots \\
+a_n
+\end{bmatrix} = \begin{bmatrix}
+\sum y_i \\
+\sum y_i*x_i \\
+\vdots \\
+\sum y_i*x_i^n
+\end{bmatrix}  $$
+
+Cree una función que realice el mínimos cuadrados de orden $n$ y devuelva el vector de coeficientes.
+
+\item \label{enum:r2} Cree una función que permita calcular el $r^2$ para un modelo polinomial de orden $n$, debe tomar como entrada los $x$, los $y$ y los coeficientes $a$ en un vector y devolver el valor de $r^2$.
+
+
+\item \label{enum:splitTrainTest} Subir indiscriminadamente el orden del polinomio a ajustar consigue que se reduzca el error residual de ajuste. Pero es posible ver que esto no implica un mejor ajuste. Si se divide el set de datos en 2 partes y se usa una para realizar el ajuste y luego se calcula el $r$ sobre los datos utilizados y sobre los datos que quedaron afuera puede verse un comportamiento peculiar. 
+
+Cree un algoritmo que perimta separar los datos en un conjunto de entrenamiento o ajuste y otro conjunto de validación. debe tomar como entrada el conjunto total de $x$, el conjunto total de $y$ y un porcentaje  que será el de datos de entrenamiento. Como retorno de la función será $[x_{train},y_{train},x_{test},y_{test}]$.
+
+
+
+\end{enumerate}
+
+\subsection*{Ejercicio 1}
+Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
+\begin{itemize}
+\item Algoritmo de Remonte.
+\item Algoritmo de Descenso.
+\item Factorización LU.
+\end{itemize}
+
+\subsection*{Ejercicio 2}
+Encuentre la solución a los siguentes sistemas de ecuaciones aplicando Gauss-Jordan:
+
+\begin{itemize}
+\item[a] $\left\lbrace \begin{array}{ccc}
+10x_1 +2x_2 -x_3 & = & 27 \\
+-3x_1 -6x_2 +2x_3 & = & -61.5 \\
+x_1 +x_2 +5x_3 & = & -21.5 \\
+\end{array} \right.$ 
+\item[b] $\left\lbrace \begin{array}{ccc}
+-2x_2 +x_3 & = & -10 \\
+2x_1 +6x_2 -4x_3 & = & 44 \\
+-x_1 -2x_2 +5x_3 & = & -26 \\
+\end{array} \right.$
+\end{itemize}
+
+
+\subsection*{Ejercicio 3}
+
+Resuelva el ejercicio 2a, pero utilizando descompusición LU, para los siguientes vectores solucion (b):
+
+$b_1= \begin{bmatrix}
+12\\
+18\\
+-6
+\end{bmatrix},
+b_2= \begin{bmatrix}
+3\\
+-4\\
+-7
+\end{bmatrix},
+b_3= \begin{bmatrix}
+1\\
+0\\
+-1
+\end{bmatrix}$
+
+
+
+\section*{Métodos iterativos}
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item Cree una función que analice si el algoritmo iterativo de Gauss-Seidel convergerá.
+
+\item Cree una función que realice pivoteo de filas (solo con las filas que siguen) si no cumple con la condición de convergencia.
+
+\item Cree una función que realice el algoritmo de Gauss-Seidel clásico, checkeando previamente la convergencia (recuerde que es condicion suficiente pero no necesaria, así que solo muestre un mensaje por pantalla avisando esto). la Función debe tomar como parmaetro de entrada la matriz $A$ el vector $B$, un vector de tolerancia de errores y un número máximo de iteraciones para salir en caso de que no converja. 
+
+\item Cree una función que realice el algoritmo de Gauss-Seidel con relajación, permitiendo elegir el parámetro de relajación.
+ 
+\end{enumerate}
+
+
+\subsection*{Ejercicio 4}
+
+Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
+\begin{itemize}
+\item Gauss-Seidel.
+\item Gauss-Seidel con Relajación.
+\end{itemize}
+
+\subsection*{Ejercicio 5}
+
+
+Resuelva utilizando Gauss-Seidel el siguiente sistema de ecuaciones 
+$$\begin{array}{ccc}
+10x_1 +2x_2 - x_3 	&=& 27\\
+-3x_1 -6x_2 + 2x_3 	&=& -61.5\\
+x_1+x_2+ 5x_3 		&=& -21.5
+\end{array}$$
+
+\subsection*{Ejercicio 6}
+
+Resuelva el siguiente sistema de ecuaciones:
+
+$$\begin{array}{ccc}
+2x_1 -6x_2 -x_3 &=& -38\\
+-3x_1-x_2+7x_3 &=& -34\\
+-8x_1 +x_2-2x_3 &=& -20
+\end{array}$$
+
+Justifique que método utilizó para resolverlo.
+
+
+\end{document}
