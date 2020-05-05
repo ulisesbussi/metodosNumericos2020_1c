@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  28 APR 2020 19:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  29 APR 2020 23:02
 entering extended mode
 **./clase06.tex
 (clase06.tex
@@ -1609,8 +1609,13 @@ Package pdftex.def Info: logoUnq.png  used on input line 228.
  [20
 
 ]
-Overfull \hbox (15.82109pt too wide) detected at line 256
-[] \OT1/cmbr/m/n/9 = 2 [] [] = 0
+Overfull \hbox (1.17189pt too wide) detected at line 256
+[] \OT1/cmbr/m/n/9 = \OMS/cmbrs/m/n/9  \OT1/cmbr/m/n/9 2 [] [] = 0
+ []
+
+
+Overfull \hbox (23.01549pt too wide) detected at line 256
+[] \OT1/cmbr/m/n/9 = \OMS/cmbrs/m/n/9  \OT1/cmbr/m/n/9 2 [] [] = 0
  []
 
 
@@ -2221,7 +2226,7 @@ am Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmb8a.pfb>
 Output written on D:\Ulises\mnum\metodosNumericos2020_1c\Clases\Clase06\build\c
-lase06.pdf (69 pages, 894921 bytes).
+lase06.pdf (69 pages, 894946 bytes).
 PDF statistics:
  3321 PDF objects out of 3580 (max. 8388607)
  148 named destinations out of 1000 (max. 500000)
