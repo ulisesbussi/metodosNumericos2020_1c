@@ -169,53 +169,21 @@ Cree un algoritmo que perimta separar los datos en un conjunto de entrenamiento 
 \end{enumerate}
 
 \subsection*{Ejercicio 1}
-Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
-\begin{itemize}
-\item Algoritmo de Remonte.
-\item Algoritmo de Descenso.
-\item Factorización LU.
-\end{itemize}
+Realice un ajuste de mínimos cuadrados con una recta al conjunto de puntos obtenidos de la función "e1Data.m" (llamela utilizando: $x,y = e1Data()$). Calcule el $r^2$, grafique el conjunto de datos junto con el ajuste. Grafique el error de predicción de cada punto ( $e_i = y_i - a_0 -a_1 x_i$).
 
 \subsection*{Ejercicio 2}
-Encuentre la solución a los siguentes sistemas de ecuaciones aplicando Gauss-Jordan:
+Utilice los datos de "e1Data.m" y realice ajustes con polinomios de grado 1, 2, 3, 4 y 5. Calcule en cada caso el $r^2$ ¿Cuál elegiría para representar los datos?. 
 
-\begin{itemize}
-\item[a] $\left\lbrace \begin{array}{ccc}
-10x_1 +2x_2 -x_3 & = & 27 \\
--3x_1 -6x_2 +2x_3 & = & -61.5 \\
-x_1 +x_2 +5x_3 & = & -21.5 \\
-\end{array} \right.$ 
-\item[b] $\left\lbrace \begin{array}{ccc}
--2x_2 +x_3 & = & -10 \\
-2x_1 +6x_2 -4x_3 & = & 44 \\
--x_1 -2x_2 +5x_3 & = & -26 \\
-\end{array} \right.$
-\end{itemize}
-
+Ahora particione los datos en un conjunto de ajuste con el $70\%$ de los datos, realice los mismos ajustes, calcule el $r^2$ sobre los datos que quedaron afuera. ¿Que sucede si compara los valores de los coeficientes de determinación?
 
 \subsection*{Ejercicio 3}
 
-Resuelva el ejercicio 2a, pero utilizando descompusición LU, para los siguientes vectores solucion (b):
-
-$b_1= \begin{bmatrix}
-12\\
-18\\
--6
-\end{bmatrix},
-b_2= \begin{bmatrix}
-3\\
--4\\
--7
-\end{bmatrix},
-b_3= \begin{bmatrix}
-1\\
-0\\
--1
-\end{bmatrix}$
+Se sabe que el conjunto de datos generado por "e3Data.m" ajusta bien bajo la fórmula $y = \frac{a}{1+b*x}$, ¿Qué transformación utilizaría para llevar el problema a una relación lineal? Aplíquela, encuentre el valor de los parámetros $a$, y $b$. Grafique el problema en el espacio transformado y en el espacio de origen.
 
 
 
-\section*{Métodos iterativos}
+
+\section*{Interpolación}
 
 \subsection*{Algoritmos}
 

@@ -1,4 +1,15 @@
 \babel@toc {spanish}{}
-\beamer@sectionintoc {1}{Ajustes de curvas: Validaci\IeC {\'o}n}{3}{0}{1}
-\beamer@sectionintoc {2}{Validaci\IeC {\'o}n}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{Validaci\IeC {\'o}n: Ejemplo}{8}{0}{2}
+\beamer@sectionintoc {1}{Ajustes de curvas: Validación}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Validación}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Validación: Ejemplo}{7}{0}{1}
+\beamer@sectionintoc {2}{Interpolación}{18}{0}{2}
+\beamer@subsectionintoc {2}{1}{Interpolación: Polinomios Interpoladores de Lagrange}{19}{0}{2}
+\beamer@subsubsectionintoc {2}{1}{1}{Polinomios de Lagrange: un ejemplo}{26}{0}{2}
+\beamer@sectionintoc {3}{Extrapolación}{48}{0}{3}
+\beamer@subsectionintoc {3}{1}{Extrapolación: un Ejemplo}{52}{0}{3}
+\beamer@sectionintoc {4}{Interpolación con Splines}{56}{0}{4}
+\beamer@subsectionintoc {4}{1}{Spline Lineal: un ejemplo}{64}{0}{4}
+\beamer@subsectionintoc {4}{2}{Spline Lineal}{80}{0}{4}
+\beamer@subsectionintoc {4}{3}{Spline Cuadrático}{85}{0}{4}
+\beamer@subsubsectionintoc {4}{3}{1}{Spline Cuadrático: un ejemplo}{96}{0}{4}
+\beamer@subsubsectionintoc {4}{3}{2}{Spline Cuadrático: resumiendo}{115}{0}{4}
