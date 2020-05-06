@@ -1,0 +1,220 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+
+\title{Guía 4}
+
+\author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
+
+
+\maketitle \vspace{20pt}
+
+\section*{Mínimos Cuadrados}
+%
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item \label{enum:minCuadRec} Programe el algoritmo que le permita resolver mínimos cuadrados para una recta, tome como entrada los datos $x_i$ e $y_i$ y devuelva los parámetros $(a,b)$ de la recta $y = b + ax$.
+
+\item \label{enum:minCuadN} Es posible generalizar la expresión de mínimos cuadrados para un polinomio de orden $n$ puesto, que la primer fila tiene la suma sobre las potencias de $x$ hasta el orden $n$ igualado a la suma de los $y$. la segunda antes de realizar la suma multiplica todo por $x$, la tercera por $x^2$ y así hasta la última fila que multiplica todo por $x^n$. Dejando el sistema de la siguiente forma:
+
+$$\begin{bmatrix}
+n         & \sum x_i  		& \sum x_i^2	&\dots  & \sum x_i^n 		\\
+\sum x_i  & \sum x_i^2  	& \sum x_i^3	&\dots  & \sum x_i^{n+1} 	\\
+\vdots    &					&				&		& \vdots         	\\
+\sum x_i^n& \sum x_i^{n+1}	& \sum x_i^{n+2}&\dots  & \sum x_i{n+n}
+\end{bmatrix} \begin{bmatrix}
+a_0 \\
+a_1 \\
+\vdots \\
+a_n
+\end{bmatrix} = \begin{bmatrix}
+\sum y_i \\
+\sum y_i*x_i \\
+\vdots \\
+\sum y_i*x_i^n
+\end{bmatrix}  $$
+
+Cree una función que realice el mínimos cuadrados de orden $n$ y devuelva el vector de coeficientes.
+
+\item \label{enum:r2} Cree una función que permita calcular el $r^2$ para un modelo polinomial de orden $n$, debe tomar como entrada los $x$, los $y$ y los coeficientes $a$ en un vector y devolver el valor de $r^2$.
+
+
+\item \label{enum:splitTrainTest} Subir indiscriminadamente el orden del polinomio a ajustar consigue que se reduzca el error residual de ajuste. Pero es posible ver que esto no implica un mejor ajuste. Si se divide el set de datos en 2 partes y se usa una para realizar el ajuste y luego se calcula el $r$ sobre los datos utilizados y sobre los datos que quedaron afuera puede verse un comportamiento peculiar. 
+
+Cree un algoritmo que perimta separar los datos en un conjunto de entrenamiento o ajuste y otro conjunto de validación. debe tomar como entrada el conjunto total de $x$, el conjunto total de $y$ y un porcentaje  que será el de datos de entrenamiento. Como retorno de la función será $[x_{train},y_{train},x_{test},y_{test}]$.
+
+
+
+\end{enumerate}
+
+\subsection*{Ejercicio 1}
+
+Para estimar el tamaño de una represa, es fundamental conocer el caudal historico del rio. Este dato muchas veces es imposible de conseguir. Los datos meteorológicos, sin embargo, suelen ser de facil acceso. Si se logra, entonces,determinar la relación entre caudal y precipitación, se puede realizar una estimación del caudal.
+
+Los siguientes datos fueron obtenidos de los últimos 8 años:
+
+\begin{table}[]
+\centering
+\begin{tabular}{l|llllllll}
+ \hline
+Prec (cm/año) & 99.3 & 116.8 & 94.2 & 126.8 & 139.6 & 104.3 & 108.4 & 88.6    \\ \hline
+Caudal (m3/s) & 16.5 & 18.2  & 1.62 & 19.6  & 23.1  & 15.4  & 16.8  & 14.5    \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}[label=\alph*]
+    \item- Graficar Caudal vs Precipitación.
+    \item- Ajustar los puntos con una regresión lineal.
+    \item- Luego de ver el gráfico, usted supone que una de las mediciones esta mal tomada. Quite ese punto y vuelva a realizar el ajuste. ¿Ve alguna mejora?
+    \item- Utilizando los datos obtenidos del 2do ajuste, calcule el caudal para una precipitación de 115 cm/año.
+    \item- En un record histórico de precipitaciones, se registraron 230 cm/año. ¿Es posible estimar el caudal para esa valor de precipitaciones? Justifique.
+\end{enumerate}
+
+
+\subsection*{Ejercicio 2}
+
+El siguiente modelo puede aplicarse a reacciones quimicas que ocurren en un biorreactor:
+
+\begin{equation*}
+    c=c_{0}-\frac{1}{\sqrt{1+2kc^{_{0}^{2}}t}}
+\end{equation*}
+
+
+\noindent donde c = concentración $(mg/L)$, c0 = concentración inicial $(mg/L)$,
+k = tasa de reacción $(L^{2}/ mg^{2}d)$ y t= tiempo $(d)$. Linearizar este modelo y usarlo para estimar k y c0, usando los siguientes datos:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l|llllllll}
+\hline
+tiempo & 0    & 0.5  & 1    & 1.5  & 2    & 3    & 4   & 5    \\ \hline
+concentración & 3.26 & 2.09 & 1.62 & 1.48 & 1.17 & 1.06 & 0.9 & 0.85 \\ \hline
+\end{tabular}
+\caption{}
+\label{tab:my-table}
+\end{table}
+
+
+\end{document}
