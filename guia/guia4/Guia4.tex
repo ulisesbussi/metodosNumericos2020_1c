@@ -182,53 +182,51 @@ Se sabe que el conjunto de datos generado por "e3Data.m" ajusta bien bajo la fó
 
 
 
+\subsection*{Ejercicio 4}
 
-\section*{Interpolación}
+Para estimar el tamaño de una represa, es fundamental conocer el caudal historico del rio. Este dato muchas veces es imposible de conseguir. Los datos meteorológicos, sin embargo, suelen ser de facil acceso. Si se logra, entonces,determinar la relación entre caudal y precipitación, se puede realizar una estimación del caudal.
 
-\subsection*{Algoritmos}
+Los siguientes datos fueron obtenidos de los últimos 8 años:
 
-\begin{enumerate}[label=\Roman*]
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|llllllll}
+ \hline
+Prec (cm/año) & 99.3 & 116.8 & 94.2 & 126.8 & 139.6 & 104.3 & 108.4 & 88.6    \\ \hline
+Caudal (m3/s) & 16.5 & 18.2  & 1.62 & 19.6  & 23.1  & 15.4  & 16.8  & 14.5    \\ \hline
+\end{tabular}
+\end{table}
 
-\item Cree una función que analice si el algoritmo iterativo de Gauss-Seidel convergerá.
-
-\item Cree una función que realice pivoteo de filas (solo con las filas que siguen) si no cumple con la condición de convergencia.
-
-\item Cree una función que realice el algoritmo de Gauss-Seidel clásico, checkeando previamente la convergencia (recuerde que es condicion suficiente pero no necesaria, así que solo muestre un mensaje por pantalla avisando esto). la Función debe tomar como parmaetro de entrada la matriz $A$ el vector $B$, un vector de tolerancia de errores y un número máximo de iteraciones para salir en caso de que no converja. 
-
-\item Cree una función que realice el algoritmo de Gauss-Seidel con relajación, permitiendo elegir el parámetro de relajación.
- 
+\begin{enumerate}[label=\alph*]
+    \item- Graficar Caudal vs Precipitación.
+    \item- Ajustar los puntos con una regresión lineal.
+    \item- Luego de ver el gráfico, usted supone que una de las mediciones esta mal tomada. Quite ese punto y vuelva a realizar el ajuste. ¿Ve alguna mejora?
+    \item- Utilizando los datos obtenidos del 2do ajuste, calcule el caudal para una precipitación de 115 cm/año.
+    \item- En un record histórico de precipitaciones, se registraron 230 cm/año. ¿Es posible estimar el caudal para esa valor de precipitaciones? Justifique.
 \end{enumerate}
 
 
-\subsection*{Ejercicio 4}
-
-Determine el numero de operaciones de punto flotante para los siguientes algoritmos para matrices de $n\times	n$:
-\begin{itemize}
-\item Gauss-Seidel.
-\item Gauss-Seidel con Relajación.
-\end{itemize}
-
 \subsection*{Ejercicio 5}
 
+El siguiente modelo puede aplicarse a reacciones quimicas que ocurren en un biorreactor:
 
-Resuelva utilizando Gauss-Seidel el siguiente sistema de ecuaciones 
-$$\begin{array}{ccc}
-10x_1 +2x_2 - x_3 	&=& 27\\
--3x_1 -6x_2 + 2x_3 	&=& -61.5\\
-x_1+x_2+ 5x_3 		&=& -21.5
-\end{array}$$
+\begin{equation*}
+    c=c_{0}-\frac{1}{\sqrt{1+2kc^{_{0}^{2}}t}}
+\end{equation*}
 
-\subsection*{Ejercicio 6}
 
-Resuelva el siguiente sistema de ecuaciones:
+\noindent donde c = concentración $(mg/L)$, c0 = concentración inicial $(mg/L)$,
+k = tasa de reacción $(L^{2}/ mg^{2}d)$ y t= tiempo $(d)$. Linearizar este modelo y usarlo para estimar k y c0, usando los siguientes datos:
 
-$$\begin{array}{ccc}
-2x_1 -6x_2 -x_3 &=& -38\\
--3x_1-x_2+7x_3 &=& -34\\
--8x_1 +x_2-2x_3 &=& -20
-\end{array}$$
-
-Justifique que método utilizó para resolverlo.
-
+\begin{table}[h]
+\centering
+\begin{tabular}{l|llllllll}
+\hline
+tiempo & 0    & 0.5  & 1    & 1.5  & 2    & 3    & 4   & 5    \\ \hline
+concentración & 3.26 & 2.09 & 1.62 & 1.48 & 1.17 & 1.06 & 0.9 & 0.85 \\ \hline
+\end{tabular}
+\caption{}
+\label{tab:my-table}
+\end{table}
 
 \end{document}
