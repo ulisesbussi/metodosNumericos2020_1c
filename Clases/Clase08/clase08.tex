@@ -384,6 +384,37 @@ Es posible realizar un procedimiento similar para el planteo de una derivada seg
 \end{frame}
 
 
+\section{Inestabilidad y Amplificación de Ruido}
+
+\begin{frame}{Inestabilidad y Amplificación de Ruido}
+  Al calcular derivadas numéricamente hay que tener \textbf{Cuidado}.\vspace{15pt} \pause
+  
+  Si los \textbf{datos} tienen \textbf{Ruido}. \pause $\rightarrow$ Se amplifica.\vspace{15pt} \pause
+  
+  A veces el ruido oculta el comportamiento de la derivada.
+  
+\end{frame}
+
+\begin{frame}{Amplificación de Ruido}
+  Supongamos que tenemos el conjunto de datos $ x=1:.1:5, y= 50 +3\text{randn}(\text{length}(x),1)$ 
+  \only<2-3>{\begin{minipage}{.45\linewidth}
+	\includegraphics[width=\linewidth]{amplificacion/xy.png} 
+  \end{minipage}}  \only<3>{\begin{minipage}{.45\linewidth}
+	\includegraphics[width=\linewidth]{amplificacion/xy1.png} 
+  \end{minipage}}
+  \visible<4>{\begin{minipage}{.7\linewidth}
+	  \includegraphics[width=\linewidth]{amplificacion/xyy1.png}   
+  \end{minipage} \begin{minipage}{.25\linewidth}
+  	$$std(y )= 2.88$$ \\
+  	$$std(y'_{\text{forward}} ) = 38.41 $$\\
+  	$$std(y'_{\text{center}} ) = 15.77 $$\\
+  \end{minipage}    }
+
+
+\end{frame}
+
+
+
 \end{document}
 
 
