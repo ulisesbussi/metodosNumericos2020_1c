@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  3 JUN 2020 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.30)  3 JUN 2020 15:34
 entering extended mode
-**./Guia4.tex
-(Guia4.tex
+**./TP_3.tex
+(TP_3.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06>
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
@@ -713,8 +713,8 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count306
 \l__pdf_internal_box=\box115
 )
-(D:\Ulises\mnum\metodosNumericos2020_1c\guia\guia4\build\Guia4.aux)
-\openout1 = `Guia4.aux'.
+No file TP_3.aux.
+\openout1 = `TP_3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
 LaTeX Font Info:    ... okay on input line 120.
@@ -732,7 +732,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
 LaTeX Font Info:    ... okay on input line 120.
 LaTeX Font Info:    Trying to load font information for T1+qhv on input line 12
 0.
-
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tex-gyre\t1qhv.fd"
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
@@ -795,12 +794,12 @@ Overfull \hbox (29.08817pt too wide) in paragraph at lines 128--128
 [][][][][][][] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137
+LaTeX Font Info:    Trying to load font information for U+msa on input line 140
 .
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137
+LaTeX Font Info:    Trying to load font information for U+msb on input line 140
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -815,38 +814,28 @@ This may cause the page layout to be inconsistent, however.
 [1{C:/Users/Ulysses/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-[2]
-LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 2
-36.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/tex-gyre\ts1qhv.fd"
-File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
-) [3]
-(D:\Ulises\mnum\metodosNumericos2020_1c\guia\guia4\build\Guia4.aux) ) 
+(D:\Ulises\mnum\metodosNumericos2020_1c\guia\TP_3\build\TP_3.aux) ) 
 Here is how much of TeX's memory you used:
- 29268 strings out of 480934
- 688883 string characters out of 2909676
- 1244318 words of memory out of 3000000
- 44756 multiletter control sequences out of 15000+200000
- 559447 words of font info for 51 fonts, out of 3000000 for 9000
+ 29229 strings out of 480934
+ 688189 string characters out of 2909676
+ 1238316 words of memory out of 3000000
+ 44723 multiletter control sequences out of 15000+200000
+ 559081 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,12n,75p,830b,227s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Progra
-m Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ts1.enc}{C:/Program Files/MiKTeX 
-2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dv
-ips/tex-gyre/q-ec-sc.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/tex-gyre/qhvb.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qh
-vr.pfb>
-Output written on D:\Ulises\mnum\metodosNumericos2020_1c\guia\guia4\build\Guia4
-.pdf (3 pages, 130864 bytes).
+ 59i,11n,75p,829b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program 
+Files/MiKTeX 2.9/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/Program Files/MiKTeX 2.9
+/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/tex-gyre/qhvr.pfb>
+Output written on D:\Ulises\mnum\metodosNumericos2020_1c\guia\TP_3\build\TP_3.p
+df (1 page, 89584 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
+ 41 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

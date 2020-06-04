@@ -1,0 +1,208 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{sectsty}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\renewcommand\familydefault{\sfdefault}
+\usepackage{tgheros}
+\usepackage{amsmath,amssymb,amsthm,textcomp}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tikz}
+%\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{geometry}
+\geometry{left=25mm,right=25mm,%
+bindingoffset=0mm, top=20mm,bottom=20mm}
+
+
+
+
+
+\linespread{1.3}
+
+\newcommand{\linia}{\rule{\linewidth}{0.5pt}}
+
+% custom theorems if needed
+\newtheoremstyle{mytheor}
+    {1ex}{1ex}{\normalfont}{0pt}{\scshape}{.}{1ex}
+    {{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+
+\theoremstyle{mytheor}
+\newtheorem{defi}{Definition}
+
+% my own titles
+\makeatletter
+
+\renewcommand{\maketitle}{
+\colorbox{gray!20}{\framebox[\linewidth]{ \huge \textsc{\@title} } 
+\lfoot{\@title}
+}
+
+}
+\makeatother
+%%%
+
+
+
+% custom footers and headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{Métodos Numéricos - 1C2020}
+\rhead{}
+\cfoot{}
+\rfoot{Pagina \thepage}
+\renewcommand{\footrulewidth}{0.2pt}
+%
+
+
+\renewcommand\headrulewidth{.5pt}
+\makeatletter
+\def\headrule{{\if@fancyplain\let\headrulewidth\plainheadrulewidth\fi
+\hrule\@height\headrulewidth\@width\headwidth
+\vskip 1pt% 2pt between lines
+\hrule\@height1.5pt\@width\headwidth% lower line with .5pt line width
+\vskip-\headrulewidth
+\vskip-1.5pt}}
+\makeatother
+
+
+\makeatletter
+
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}
+\fi}
+\makeatother
+
+
+
+
+% code listing settings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    aboveskip={1.0\baselineskip},
+    belowskip={1.0\baselineskip},
+    columns=fixed,
+    extendedchars=true,
+    breaklines=true,
+    tabsize=4,
+    prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=lines,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    keywordstyle=\color[rgb]{0.627,0.126,0.941},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{01,0,0},
+    numbers=left,
+    numberstyle=\small,
+    stepnumber=1,
+    numbersep=10pt,
+    captionpos=t,
+    escapeinside={\%*}{*)}
+}
+ 
+%%%----------%%%----------%%%----------%%%----------%%%
+
+\begin{document}
+
+
+\title{Guía 6}
+
+\author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
+
+
+\maketitle \vspace{20pt}
+
+\section*{Derivadas e Integrales}
+
+
+\subsection*{Algoritmos}
+
+\begin{enumerate}[label=\Roman*]
+
+\item Programe una función que le permita calcular la derivada de primer orden hacia adelante o hacia atrás, tome como entrada un vector $x$, $y$ y una variable que le permita elegir si quiere la derivada hacia adelante o hacia atrás y devuelva el nuevo $x1$ y el nuevo $y'$ (en general son vectores de largo $\text{length(x1)}==\text{length(x1)}-1$).
+
+\item Programe una función que le permita calcular la derivada segunda hacia adelante de un conjunto de datos.
+
+\item Programe una función que le permita calcular la derivada primera centrada.
+
+
+\item Cree una función que permita calcular la integral de una función $f(x)$ usando los metodos de simpson 1/3 y 3/8.
+
+\end{enumerate}
+
+
+\subsection*{Practica}
+
+\begin{enumerate}
+    \item Los datos entregados por la función "E1P6 " corresponden a la posición de un móvil en un plano en función del tiempo. halle y grafique:
+    \begin{itemize}
+    	\item La velocidad en función del tiempo en $x$ y en $y$.
+    	\item La aceleración en función del tiempo en $x$ y en $y$.
+    	\item Grafique la Trayectoria ($x$ vs. $y$), el plano de velocidades ($x'$ vs. $y'$) y el 					plano de aceleraciones($x''$ vs. $y''$).
+    \end{itemize}
+    
+    
+    \item Los datos entregados por la función "E2P6 " a un funcional que se quiere minimizar, para encontrar el mínimo una propuesta es buscar las raices de la derivada de dicho funcional. Calcule la derivada Numéricamente, y halle su raíz para hallar el mínimo del funcional. Compruebe que se trata del mínimo utilizando funciones propias del software.
+
+
+	\item Integre la función g(x) entre a y b: $g(x)=\dfrac{f(b)-f(a)}{b-a}(x-a)$. ¿Que representa g(x)? ¿Que relación tiene con f(x)(tome una f(x) genérica)? ¿Que significado tiene el resultado de la integral?
+
+	\item Evalue la siguiente integral:
+
+\begin{equation*}
+    \int_{0}^{\pi}sin(3x)dx
+\end{equation*}
+
+\begin{enumerate}[label=\alph*)]
+    \item Analíticamente
+    \item Usando los métodos: del trapecio, punto medio. Simpson 1/3 y Simpson 3/8 con item n=[1,2,3,4,5,6,7,8,9,10]
+    \item Calcule el error relativo para cada metodo y cada n. Grafique.
+    \item Analice y explique los valores obtenidos en el punto c)
+\end{enumerate} 
+
+
+
+
+\item La fuerza en el mástil de un velero puede ser representada por:
+
+\begin{equation*}
+f(z)=200\left(\dfrac{z}{5+z}\right)e^{\tfrac{-2z}{H}}   
+\end{equation*}
+
+
+\noindent donde $z$ es la elevación respecto a la cubierta y $H$ es la altura del mastil. La fuerza total ejercida sobre el mastil, puede calcularse integrando la función $f(z)$ a lo largo del mastil, es decir:
+
+\begin{equation*}
+    F=\int_{0}^{H}f(z)dz
+\end{equation*}
+
+\begin{enumerate}[label=\alph*)]
+    \item Calcule la fuerza sobre un mastil de 30 metros utilizando el metodo del trapecio y simpson 1/3. 
+    \item Calcule la diferencia porcentual entre ambos resultados para n=10
+    \item Gráfique la diferencia calculada en (b) versus el número de pasos, variando el numero de pasos entre 5 y 100.
+\end{enumerate} 
+
+\end{enumerate}
+
+
+
+
+\end{document}
+
+
