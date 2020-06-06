@@ -127,13 +127,56 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \maketitle \vspace{20pt}
 
+\section*{Ajustes e interpolación}
+
+\subsection*{Ejercicio 2}
+La siguiente tabla contiene un conjunto de puntos por los que tiene que pasar
+un robot móvil en su trayectoria. para unir dichos puntos se suele utilizar
+un interpolador que permita unir el conjunto de puntos. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|llllllll}
+ \hline
+ tiempo (s)   & 1	 &  2    &  3   &  4    &  5    &   6   &   7   &  8     \\ \hline
+ x (cm) 	  & 3    &  6    &  11  &  18   & 13    &   9   &   5   &  2    \\ \hline
+ y (cm) 	  & 3    &  5    &  7  &  10   & 14    &   25   &  20   &  25    \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{enumerate}[label=\alph*)]
+  \item Realice una interpolación con spline de grado 2, para cada dimensión.
+  \item Grafique $x$ en función de $t$, e $y$ en función de $t$.
+  \item Grafique la trayectoria  ( $x$ vs $y$ ).
+  \item Interprete ¿Por qué utilizar spline de grado 2 y no una interpolación lineal?
+\end{enumerate} 
+
+
+
+
+
 \section*{Derivadas e integrales}
 %
 
+\subsection*{Ejercicio 3} 
+
+Los datos de la función "ej3TP3" (llamela [t,x,y] = ej3TP3() )contienen puntos sobre una circunferencia de radio 1.
+
+\begin{enumerate}[label=\alph*)]
+  \item Calcule la derivada hacia adelante.
+  \item Calcule la derivada centrada.
+  \item Compruebe para ambos casos si el gradiente es perpendicular a la curva en algún punto dado. En caso de que no se cumpla esa condición, explique ¿A que podría deverse?
+
+\end{enumerate} 
 
 
 
-\subsection*{Ejercicio 1} 
+
+
+
+
+\subsection*{Ejercicio 4} 
 
 Evalue la siguiente integral:
 

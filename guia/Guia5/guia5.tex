@@ -121,25 +121,28 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \begin{document}
 
 
-\title{Guía 5}
+\title{Guía 6}
 
 \author{Ulises Bussi-Javier Portillo, Universidad Nacional de Quilmes}
 
 
 \maketitle \vspace{20pt}
 
-\section*{Interpolación}
+\section*{Derivadas e Integrales}
 
 
 \subsection*{Algoritmos}
 
 \begin{enumerate}[label=\Roman*]
 
-\item Programe una función que le permita calcular el polinomio interpolador de Newton hasta grado 2.
+\item Programe una función que le permita calcular la derivada de primer orden hacia adelante o hacia atrás, tome como entrada un vector $x$, $y$ y una variable que le permita elegir si quiere la derivada hacia adelante o hacia atrás y devuelva el nuevo $x1$ y el nuevo $y'$ (en general son vectores de largo $\text{length(x1)}==\text{length(x1)}-1$).
 
-\item Programe una función que le permita calcular el polinomio interpolador de Lagrange hasta grado n. Y retorne una función anónima para poder evaluar ese polinomio.
+\item Programe una función que le permita calcular la derivada segunda hacia adelante de un conjunto de datos.
 
-\item Programe una función que le permita interpolar con Splines de orden 1 o 2.
+\item Programe una función que le permita calcular la derivada primera centrada.
+
+
+\item Cree una función que permita calcular la integral de una función $f(x)$ usando los metodos de simpson 1/3 y 3/8.
 
 \end{enumerate}
 
@@ -147,69 +150,59 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 \subsection*{Practica}
 
 \begin{enumerate}
-    \item Usar polinomios de Newton de orden 1,2 y 3 para calcular f(3.6).
-        \begin{table}[h!]
-        \centering
-        \begin{tabular}{l|llllllll}
-        \hline
-        x & 0    & 0.5  & 1    & 1.5  & 2    & 3    & 4   & 5    \\ \hline
-        f(x) & 3.26 & 2.09 & 1.62 & 1.48 & 1.17 & 1.06 & 0.9 & 0.85 \\ \hline
-        \end{tabular}
-        %\caption{}
-        %\label{tab:my-table}
-        \end{table}
-        \begin{enumerate}
-            \item ¿Que diferencia porcentual observa entre los distintos métodos utilizados?
-            \item ¿Con qué resultado (entre los 3 calculados) se quedaría?
-        \end{enumerate}
-   
+    \item Los datos entregados por la función "E1P5 " corresponden a la posición de un móvil en un plano en función del tiempo. halle y grafique:
+    \begin{itemize}
+    	\item La velocidad en función del tiempo en $x$ y en $y$.
+    	\item La aceleración en función del tiempo en $x$ y en $y$.
+    	\item Grafique la Trayectoria ($x$ vs. $y$), el plano de velocidades ($x'$ vs. $y'$) y el 					plano de aceleraciones($x''$ vs. $y''$).
+    \end{itemize}
     
-    \item Repita el punto 1), utilizando polinomios de Lagrange.
+    
+    \item Los datos entregados por la función "E2P5 " a un funcional que se quiere minimizar, para encontrar el mínimo una propuesta es buscar las raices de la derivada de dicho funcional. Calcule la derivada Numéricamente, y halle su raíz para hallar el mínimo del funcional. Compruebe que se trata del mínimo utilizando funciones propias del software.
+
+
+	\item Integre la función g(x) entre a y b: $g(x)=\dfrac{f(b)-f(a)}{b-a}(x-a)$. ¿Que representa g(x)? ¿Que relación tiene con f(x)(tome una f(x) genérica)? ¿Que significado tiene el resultado de la integral?
+
+	\item Evalue la siguiente integral:
+
+\begin{equation*}
+    \int_{0}^{\pi}sin(3x)dx
+\end{equation*}
+
+\begin{enumerate}[label=\alph*)]
+    \item Analíticamente
+    \item Usando los métodos: del trapecio, punto medio. Simpson 1/3 y Simpson 3/8 con item n=[1,2,3,4,5,6,7,8,9,10]
+    \item Calcule el error relativo para cada metodo y cada n. Grafique.
+    \item Analice y explique los valores obtenidos en el punto c)
+\end{enumerate} 
 
 
 
-\item Usted esta dirigiendo una investigación que evalúa la posibilidad de la existencia de vida en Ganimedes, el conocido satélite de Júpiter. En particular, su interes esta en el lago Kierski, del cual se conocen los siguientes valores de concentración de oxigeno:
 
-        \begin{table}[h!]
-        \centering
-        \begin{tabular}{l|lllllll}
-        \hline
-        $T[ ^\circ C]$ & 0    & 8  & 16    & 24  & 32    & 40   \\ \hline
-        concentración [mg/L] & 14.621 & 11.843 & 9.870 & 8.418 & 7.305 & 6.413 \\ \hline
-        \end{tabular}
-        %\caption{}
-        %\label{tab:my-table}
-        \end{table}
+\item La fuerza en el mástil de un velero puede ser representada por:
 
-        \begin{enumerate}
-            \item Calcule la concentración a 28 grados utilizando splines.
-            \item ¿Podría obtener ese valor utilizando una regresión? ¿Que ventajas o desventajas tiene cada caso?
-        \end{enumerate}
+\begin{equation*}
+f(z)=200\left(\dfrac{z}{5+z}\right)e^{\tfrac{-2z}{H}}   
+\end{equation*}
 
-\item En la robótica, para realizar el cálculo de trayectorias de manipuladores robóticos, se proponen puntos de interés y se calculan polinomios que pasen por dichos puntos (interpolación).
 
-Realice una interpolación para generar una trayectoria que pase por los siguientes puntos para los tiempos dados:
+\noindent donde $z$ es la elevación respecto a la cubierta y $H$ es la altura del mastil. La fuerza total ejercida sobre el mastil, puede calcularse integrando la función $f(z)$ a lo largo del mastil, es decir:
 
-      \begin{table}[h!]
-        \centering
-        \begin{tabular}{l|llllllll}
-        \hline
-        $t$ & 0    & 0.5  & 1    & 1.5  & 2  & 2.5  & 3   \\ \hline
-        $x$ & 1    & 2    & 3    & 4    & 5  & 6    & 7   \\ \hline
-		$y$ & 1    & 4    & 3    & 5    & 5  & 2    & 5   \\ \hline  
-        \end{tabular}
-        %\caption{}
-        %\label{tab:my-table}
-        \end{table}
+\begin{equation*}
+    F=\int_{0}^{H}f(z)dz
+\end{equation*}
 
-     \begin{enumerate}
-            \item Interpole para cada coordenada (para $x$ y para $y$).
-            \item Realice un gráfico de cada coordenada en función del tiempo, desde la interpolación con un paso $0.1$.
-            \item Realice un gráfico de la trayectoria ($x$ vs. $y$).
-        \end{enumerate}
-
+\begin{enumerate}[label=\alph*)]
+    \item Calcule la fuerza sobre un mastil de 30 metros utilizando el metodo del trapecio y simpson 1/3. 
+    \item Calcule la diferencia porcentual entre ambos resultados para n=10
+    \item Gráfique la diferencia calculada en (b) versus el número de pasos, variando el numero de pasos entre 5 y 100.
+\end{enumerate} 
 
 \end{enumerate}
+
+
+
+
 \end{document}
 
 
