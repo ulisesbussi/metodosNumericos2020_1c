@@ -127,9 +127,11 @@ bindingoffset=0mm, top=20mm,bottom=20mm}
 
 \maketitle \vspace{20pt}
 
+
+
 \section*{Ajustes e interpolación}
 
-\subsection*{Ejercicio 2}
+\subsection*{Ejercicio 1}
 La siguiente tabla contiene un conjunto de puntos por los que tiene que pasar
 un robot móvil en su trayectoria. para unir dichos puntos se suele utilizar
 un interpolador que permita unir el conjunto de puntos. 
@@ -151,6 +153,21 @@ un interpolador que permita unir el conjunto de puntos.
   \item Grafique la trayectoria  ( $x$ vs $y$ ).
   \item Interprete ¿Por qué utilizar spline de grado 2 y no una interpolación lineal?
 \end{enumerate} 
+
+\subsection*{Ejercicio 2} 
+
+En el último tiempo, poder determinar la temperatura de las personas de manera eficiente, fácil y rápida se ha vuelto crucial. Esto ha llevado a muchas empresas al desarrollo de nuevos termómetros y formas alternativas de medición de temperatura. La empresa donde usted trabaja no se quedó atras, y está trabajando en el desarrollo de un microtermómetro de jarabe de arce.
+
+Usted, es asignado como lider técnico del proyecto y su principal tarea es hacer la calibración de los termómetros. Dicha calibración consiste en encontrar la relación entre la longitud medida en el termómetro y la temperatura corporal. Luego de contactar a un colega canadiense, obtiene valores de longitud y temperatura que podrían servirle (calib.csv), por lo que decide realizar las siguientes tareas:
+
+\begin{enumerate}[label=\alph* )]
+    \item Crear una función en Matlab que, dado un conjunto de puntos x,y, realice un ajuste por cuadrados minimos (regresión lineal) y calcule el $R^2$ de la regresión.
+    \item Realizar el ajuste de los datos del archivo calib.csv. Graficar.
+    \item Analizar los resultados del ajuste: ¿Cuál fue el valor de $R^2$ obtenido? ¿Qué indica este valor respecto a la regresión? Según su criterio, ¿Es bueno el ajuste? ¿Propondría algun cambio y/o mejora, teniendo en cuenta las condiciones del problema? Justifique.
+    \item Usando los resultados obtenidos en b), crear una función que tome un valor de longitud y devuelva temperatura.
+    \item Que temperatura tiene una persona si el termometro indica 70 $\mu$m
+    
+    \end{enumerate}
 
 
 
@@ -191,5 +208,5 @@ Evalue la siguiente integral:
     \item Analice y explique los valores obtenidos en el punto c)
 \end{enumerate} 
 
-
 \end{document}
+
