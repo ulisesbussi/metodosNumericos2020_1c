@@ -1,0 +1,29 @@
+m=1; M=1; G=1;
+r=1; v0=1;
+
+v0 = [0 ,-1];
+x0 = [1 , 0];
+
+
+h = 0.001;
+
+x(1,:) = [x0(1),v0(1),x0(2),v0(2)];
+
+f1 = @(estado) estado(2);
+f1 = @(estado) G*M estado(2) /r(estado) ;
+f3 = @(estado) estado(4);
+f1 = @(estado) estado(2);
+
+
+
+for i=1:11000
+    estado = x(i,:);
+    r = sqrt(estado(1)^2+estado(3)^2);
+    estadoNuevo(1) = estado(1) + h*estado(2);
+    estadoNuevo(2) = estado(2) - h*G*M*estado(1)/(r^3);
+    estadoNuevo(3) = estado(3) + h*estado(4);
+    estadoNuevo(4) = estado(4) - h*G*M*estado(3)/(r^3);
+    x(i+1,:) = estadoNuevo;
+end
+
+plot(x(:,1),x(:,3))
