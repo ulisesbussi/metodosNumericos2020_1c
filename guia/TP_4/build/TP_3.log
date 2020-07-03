@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.14)  24 JUN 2020 01:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.14)  3 JUL 2020 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1235,21 +1235,21 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 137.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<f1g.png, id=4, 216.05719pt x 298.11375pt>
-File: f1g.png Graphic file (type png)
-<use f1g.png>
-Package pdftex.def Info: f1g.png  used on input line 145.
-(pdftex.def)             Requested size: 136.57462pt x 188.4495pt.
+<f1_p.jpeg, id=4, 187.70125pt x 368.37625pt>
+File: f1_p.jpeg Graphic file (type jpg)
+<use f1_p.jpeg>
+Package pdftex.def Info: f1_p.jpeg  used on input line 145.
+(pdftex.def)             Requested size: 136.57462pt x 268.05241pt.
 
-Overfull \hbox (8.16629pt too wide) in paragraph at lines 152--153
-\OT1/cmr/m/n/10.95 5\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 972 \OMS/cmsy/m/n/1
-0.95 ^^B \OT1/cmr/m/n/10.95 10[]4\OML/cmm/m/it/10.95 kg$ \T1/qhv/m/n/10.95 ubi-
-cado como se ve en la figura [] en $\OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 :\
-OT1/cmr/m/n/10.95 495\OML/cmm/m/it/10.95 e\OT1/cmr/m/n/10.95 11\OML/cmm/m/it/10
-.95 ; \OT1/cmr/m/n/10.95 0]\OML/cmm/m/it/10.95 m$ \T1/qhv/m/n/10.95 y una ve-lo
-ci-dad $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^@\OT1/
-cmr/m/n/10.95 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 977\OML/cmm/m/it/10.95 e
-\OT1/cmr/m/n/10.95 4]\OML/cmm/m/it/10.95 m=s$\T1/qhv/m/n/10.95 ,
+Overfull \hbox (1.46634pt too wide) in paragraph at lines 152--153
+\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 98 \OMS/cmsy/m/n/10
+.95 ^^B \OT1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 kg$ \T1/qhv/m/n/10.95 ubi-ca
+do como se ve en la figura [] en $\OT1/cmr/m/n/10.95 [1\OML/cmm/m/it/10.95 :\OT
+1/cmr/m/n/10.95 495\OML/cmm/m/it/10.95 e\OT1/cmr/m/n/10.95 11\OML/cmm/m/it/10.9
+5 ; \OT1/cmr/m/n/10.95 0]\OML/cmm/m/it/10.95 m$ \T1/qhv/m/n/10.95 y una ve-loci
+-dad $\OT1/cmr/m/n/10.95 [0\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^@\OT1/cm
+r/m/n/10.95 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 977\OML/cmm/m/it/10.95 e\O
+T1/cmr/m/n/10.95 4]\OML/cmm/m/it/10.95 m=s$\T1/qhv/m/n/10.95 ,
  []
 
 
@@ -1260,30 +1260,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
- <./f1g.png>] [2]
-(build/TP_3.aux) ) 
+ <./f1_p.jpeg>]
+<prediccion.jpeg, id=20, 746.79pt x 584.1825pt>
+File: prediccion.jpeg Graphic file (type jpg)
+<use prediccion.jpeg>
+Package pdftex.def Info: prediccion.jpeg  used on input line 180.
+(pdftex.def)             Requested size: 386.96027pt x 302.69806pt.
+ [2 <./prediccion.jpeg>] [3] (build/TP_3.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 24693 strings out of 492982
- 545526 string characters out of 6134896
- 696283 words of memory out of 5000000
- 27874 multiletter control sequences out of 15000+600000
+ 24699 strings out of 492982
+ 545637 string characters out of 6134896
+ 695284 words of memory out of 5000000
+ 27879 multiletter control sequences out of 15000+600000
  30383 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,11n,73p,827b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}</usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
-sr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/typ
-e1/public/tex-gyre/qhvr.pfb>
-Output written on build/TP_3.pdf (2 pages, 111778 bytes).
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/e
+nc/dvips/tex-gyre/q-ec-sc.enc}</usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/f
+onts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-gy
+re/qhvr.pfb>
+Output written on build/TP_3.pdf (3 pages, 150392 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

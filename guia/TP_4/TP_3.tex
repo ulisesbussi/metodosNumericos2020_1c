@@ -142,14 +142,14 @@ Donde $G=6.67\times10^{-11} \frac{N m^2}{{kg}^2} $ es conocida como la constante
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=.3\linewidth]{f1g.png}
+\includegraphics[width=.3\linewidth]{f1_p.jpeg}
 \label{fig:f1}
 \caption{Esquema de planetas y sistema de referencia.}
 
 \end{figure}
 
 
-Si consideramos un cuerpo celeste de masa $m_1$ que gira alrededor del sol (de masa $m_2 = 5.972\times10^24kg$ ubicado como se ve en la figura \ref{fig:f1} en $[1.495e11 , 0]m$  y una velocidad $[0 ,-2.977e4]m/s$, podemos escribir la segunda ley de Newton para el cuerpo:
+Si consideramos un cuerpo celeste de masa $m_1$ que gira alrededor del sol (de masa $m_2 = 1.98\times10^{30}kg$ ubicado como se ve en la figura \ref{fig:f1} en $[1.495e11 , 0]m$  y una velocidad $[0 ,-2.977e4]m/s$, podemos escribir la segunda ley de Newton para el cuerpo:
 
 \begin{equation*}
 \vec F = m \vec a
@@ -169,7 +169,33 @@ La combinación de estas ecuaciones lleva a una ecuación diferencial.
 
 * Para ambos casos grafique la trayectoria ($x$ vs $y$), explique que sucede, de una interpretación.
 
+\subsection*{Ejercicio 2}
+
+El pais se encuentra en medio de una pandemia. Luego de su gran desempeño en la materia de Métodos Númericos, el presidente de la Nación lo asigna como asesor técnico del ministro de salud. Su tarea es revisar los códigos en Matlab que el propio ministro desarrolló.
+
+El ministro de salud le comenta que, para simular la propagación del virus, usó un modelo tipo SIR (SIR.m) obteniendo el gráfico que se observa a continuación:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.85\linewidth]{prediccion.jpeg}
+\label{fig:f2}
+\caption{Esquema de planetas y sistema de referencia.}
+
+\end{figure}
+
+El ministro expresó su preocupación, comentandole que la predicción la hizo para su ciudad natal (Gerli), y que según su estimación, en el pico iban a existir 29000 infectados. Usted comienza a analizar la información:
 
 
+\begin{enumerate}
+\item En la imagen enviada por el ministro hay algo totalmente incoherente, ¿Que es? Explique. (De ser necesario, busque información a cerca del modelo SIR. No es necesario que entienda el modelo en profundidad, pero si, al menos, que entienda que significan sus siglas y pueda interpretar el gráfico.)
+
+\item Según el modelo utilizado por el ministro, ¿Cuántos infectados habrá en el pico de la pandemia?
+
+\item Modificando el código, intente solucionar el problema encontrado en el item anterior. (Pista: los parametros $beta$ y $gamma$ fueron determinados con precisión, yo que usted, no los modificaría). 
+
+\item Vuelva a calcular el número de infectados en el pico (con el código corregido).
+
+\item Aumentando en un 20\% el parámetro beta. ¿Cómo cambia la curva con este aumentó en beta?
+
+\end{enumerate}
 \end{document}
-
